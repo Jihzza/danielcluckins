@@ -8,13 +8,12 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 const loadPath = `${import.meta.env.BASE_URL}locales/{{lng}}/translation.json`;
 
 try {
-  // Basic boot log
-  // eslint-disable-next-line no-console
-  console.info('[i18n] Boot', {
-    mode: process.env.NODE_ENV,
-    baseUrl: import.meta.env.BASE_URL,
-    loadPath,
-  });
+  // Basic boot log - disabled for cleaner console
+  // console.info('[i18n] Boot', {
+  //   mode: process.env.NODE_ENV,
+  //   baseUrl: import.meta.env.BASE_URL,
+  //   loadPath,
+  // });
 } catch {}
 
 i18n
@@ -27,7 +26,7 @@ i18n
       'default': ['en']
     },
     
-    debug: process.env.NODE_ENV === 'development',
+    debug: false,
 
     // --- SOLUTION IS HERE ---
     // Add 'pt' to the list of supported languages.
@@ -48,18 +47,13 @@ i18n
     },
   });
 
-// Lifecycle logs
+// Lifecycle logs - disabled for cleaner console
 try {
-  // eslint-disable-next-line no-console
-  i18n.on('initialized', (opts) => console.info('[i18n] initialized', { lng: i18n.language, opts }));
-  // eslint-disable-next-line no-console
-  i18n.on('loaded', (loaded) => console.info('[i18n] resources loaded', loaded));
-  // eslint-disable-next-line no-console
-  i18n.on('failedLoading', (lng, ns, msg) => console.error('[i18n] failed loading', { lng, ns, msg }));
-  // eslint-disable-next-line no-console
-  i18n.on('missingKey', (lngs, ns, key) => console.warn('[i18n] missing key', { lngs, ns, key }));
-  // eslint-disable-next-line no-console
-  i18n.on('languageChanged', (lng) => console.info('[i18n] languageChanged', { lng }));
+  // i18n.on('initialized', (opts) => console.info('[i18n] initialized', { lng: i18n.language, opts }));
+  // i18n.on('loaded', (loaded) => console.info('[i18n] resources loaded', loaded));
+  // i18n.on('failedLoading', (lng, ns, msg) => console.error('[i18n] failed loading', { lng, ns, msg }));
+  // i18n.on('missingKey', (lngs, ns, key) => console.warn('[i18n] missing key', { lngs, ns, key }));
+  // i18n.on('languageChanged', (lng) => console.info('[i18n] languageChanged', { lng }));
 } catch {}
 
 // Keep <html lang> in sync

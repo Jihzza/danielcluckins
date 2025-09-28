@@ -31,14 +31,11 @@ export default function HomePage() {
     const { t, i18n } = useTranslation();
     const scrollContainer = useContext(ScrollRootContext);
     const { user } = useAuth();
-    // Debug: log a sample translation on mount and language changes
+    // Language change handling (debug logs removed)
     useEffect(() => {
         try {
-            // eslint-disable-next-line no-console
-            console.info('[HomePage] language snapshot', { lng: i18n.language, resolved: i18n.resolvedLanguage, sample: t('hero.learnFrom') });
             const onChange = (lng) => {
-                // eslint-disable-next-line no-console
-                console.info('[HomePage] languageChanged -> sample', { lng, sample: t('hero.learnFrom') });
+                // Language changed - no debug log needed
             };
             i18n.on('languageChanged', onChange);
             return () => i18n.off('languageChanged', onChange);
@@ -169,8 +166,6 @@ export default function HomePage() {
 
         (async () => {
             try {
-                console.log('[HomePage] preparing welcome message… user?', !!user);
-
                 const profile = user ? {
                     full_name: user.user_metadata?.full_name || user.user_metadata?.name || null,
                     email: user.email || null,
@@ -189,14 +184,11 @@ export default function HomePage() {
                     const emittedKey = `welcome_emitted:${sessionId}`;
                     if (!sessionStorage.getItem(emittedKey)) {
                         sessionStorage.setItem(emittedKey, 'true');
-                        console.log('[HomePage] emitting welcome preview (first time this session):', msg);
                         emitWelcomePreview(msg); // writes pending_welcome_message & fires event
-                    } else {
-                        console.log('[HomePage] welcome already emitted for this session — skipping');
                     }
                 }
             } catch (err) {
-                console.error('[HomePage] Failed to build welcome preview:', err);
+                // Silent fallback - welcome message will use default
             }
         })();
 

@@ -12,15 +12,13 @@ import { NotificationsProvider } from './contexts/NotificationsContext.jsx';
 
 // React 18 root API mounts your whole app.
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <React.Suspense fallback={null}>
-      <AuthProvider>
-        {/* 2. Wrap the App component with the NotificationsProvider */}
-        {/* This ensures any component inside App can access notification data */}
-        <NotificationsProvider>
-          <App />
-        </NotificationsProvider>
-      </AuthProvider>
-    </React.Suspense>
-  </React.StrictMode>,
+  <React.Suspense fallback={null}>
+    <AuthProvider>
+      {/* 2. Wrap the App component with the NotificationsProvider */}
+      {/* This ensures any component inside App can access notification data */}
+      <NotificationsProvider>
+        <App />
+      </NotificationsProvider>
+    </AuthProvider>
+  </React.Suspense>
 );

@@ -375,6 +375,22 @@
       }
     ]
   },
+  "media": {
+    "links": {
+      "cm-tv": {
+        "alt": "CMTV investigation specials",
+        "label": "CMTV Specials"
+      },
+      "jn": {
+        "alt": "Jornal de Notícias X publication",
+        "label": "Jornal de Notícias"
+      },
+      "coutinho": {
+        "alt": "YouTube interview",
+        "label": "Coutinho Interview"
+      }
+    }
+  },
   "signup": {
     "title": "Create Your Account",
     "subtitle": "Join our community to unlock exclusive content, save your progress, and connect with others.",

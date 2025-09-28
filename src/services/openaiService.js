@@ -198,7 +198,10 @@ SERVICE-SPECIFIC STARTERS:
       const data = await callFunction('welcome-message', payload);
       return data.content;
     } catch (error) {
-      console.error('Error generating welcome message (serverless):', error);
+      // Silent fallback in development - only log in production
+      if (import.meta.env.PROD) {
+        console.error('Error generating welcome message (serverless):', error);
+      }
       return `👋 Welcome${userProfile?.full_name ? `, ${userProfile.full_name}` : ''}! I'm here to help you with Daniel's coaching services. What can I assist you with today?`;
     }
   }
