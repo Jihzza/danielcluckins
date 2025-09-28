@@ -34,41 +34,41 @@ const SubscriptionsBox = ({
       to={to}
       className="bg-black/10"
     >
-      <div className="space-y-2">
+      <div className="space-y-2 md:space-y-3 lg:space-y-4">
         {displayedSubscriptions.length > 0 ? (
           displayedSubscriptions.map((subscription, index) => (
-            <div key={index} className="flex items-center justify-between p-3 rounded-xl border border-white/20 shadow-sm">
-              <div className="flex items-center space-x-3">
-                <CreditCardIcon className="h-4 w-4 text-white/80" />
-                <span className="text-sm font-medium text-white/90">
+            <div key={index} className="flex items-center justify-between p-3 md:p-4 lg:p-5 rounded-xl border border-white/20 shadow-sm">
+              <div className="flex items-center space-x-3 md:space-x-4 lg:space-x-5">
+                <CreditCardIcon className="h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6 text-white/80" />
+                <span className="text-sm md:text-base lg:text-lg font-medium text-white/90">
                   {subscription.planName || t('subscriptions.box.fallbackPlan')}
                 </span>
-                <div className="flex items-center space-x-1">
-                  <CheckCircleIcon className="h-4 w-4 text-white/80" />
-                  <span className="text-xs text-white/80 font-medium">
+                <div className="flex items-center space-x-1 md:space-x-2 lg:space-x-3">
+                  <CheckCircleIcon className="h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6 text-white/80" />
+                  <span className="text-xs md:text-sm lg:text-base text-white/80 font-medium">
                     {subscription.status
                       ? t(`subscriptions.box.status.${subscription.status}`, { defaultValue: subscription.status })
                       : t('subscriptions.box.status.active')}
                   </span>
                 </div>
               </div>
-              <span className="text-sm font-bold text-white">
+              <span className="text-sm md:text-base lg:text-lg font-bold text-white">
                 {formatCurrency(subscription.price || 0)}
               </span>
             </div>
           ))
         ) : (
-          <div className="text-center py-4">
-            <CreditCardIcon className="h-8 w-8 text-white/40 mx-auto mb-2" />
-            <p className="text-sm text-white/70">
+          <div className="text-center py-4 md:py-6 lg:py-8">
+            <CreditCardIcon className="h-8 w-8 md:h-10 md:w-10 lg:h-12 lg:w-12 text-white/40 mx-auto mb-2" />
+            <p className="text-sm md:text-base lg:text-lg text-white/70">
               {t('subscriptions.box.empty')}
             </p>
           </div>
         )}
 
         {hasMore && (
-          <div className="text-center pt-2">
-            <span className="text-xs text-white/60">
+          <div className="text-center pt-2 md:pt-3 lg:pt-4">
+            <span className="text-xs md:text-sm lg:text-base text-white/60">
               {t('subscriptions.box.more', { count: subscriptions.length - maxDisplay })}
             </span>
           </div>

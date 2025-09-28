@@ -35,39 +35,39 @@ const FinancesBox = ({
       to={to}
       className="bg-black/10"
     >
-      <div className="space-y-3">
-        <div className="flex items-center justify-between p-3 rounded-xl border border-white/20 shadow-sm">
-          <div className="flex items-center space-x-2">
-            <CurrencyEuroIcon className="h-5 w-5 text-white/80" />
-            <span className="text-sm font-medium text-white/90">
+      <div className="space-y-3 md:space-y-4 lg:space-y-5">
+        <div className="flex items-center justify-between p-3 md:p-4 lg:p-5 rounded-xl border border-white/20 shadow-sm">
+          <div className="flex items-center space-x-2 md:space-x-3 lg:space-x-4">
+            <CurrencyEuroIcon className="h-5 w-5 md:h-6 md:w-6 lg:h-7 lg:w-7 text-white/80" />
+            <span className="text-sm md:text-base lg:text-lg font-medium text-white/90">
               {t('finances.box.consultationsLifetime')}
             </span>
           </div>
-          <span className="text-lg font-bold text-white">
+          <span className="text-lg md:text-xl lg:text-2xl font-bold text-white">
             {formatCurrency(consultationEarnings)}
           </span>
         </div>
 
-        <div className="flex items-center justify-between p-3 rounded-xl border border-white/20 shadow-sm">
-          <div className="flex items-center space-x-2">
-            <CurrencyEuroIcon className="h-5 w-5 text-white/80" />
-            <span className="text-sm font-medium text-white/90">
+        <div className="flex items-center justify-between p-3 md:p-4 lg:p-5 rounded-xl border border-white/20 shadow-sm">
+          <div className="flex items-center space-x-2 md:space-x-3 lg:space-x-4">
+            <CurrencyEuroIcon className="h-5 w-5 md:h-6 md:w-6 lg:h-7 lg:w-7 text-white/80" />
+            <span className="text-sm md:text-base lg:text-lg font-medium text-white/90">
               {t('finances.box.coachingMonthly')}
             </span>
           </div>
-          <span className="text-lg font-bold text-white">
+          <span className="text-lg md:text-xl lg:text-2xl font-bold text-white">
             {formatCurrency(coachingRevenue)}
           </span>
         </div>
 
-        <div className="flex items-center justify-between p-3 rounded-xl border border-white/20 shadow-sm">
-          <div className="flex items-center space-x-2">
-            <CurrencyEuroIcon className="h-5 w-5 text-white/80" />
-            <span className="text-sm font-medium text-white/90">
+        <div className="flex items-center justify-between p-3 md:p-4 lg:p-5 rounded-xl border border-white/20 shadow-sm">
+          <div className="flex items-center space-x-2 md:space-x-3 lg:space-x-4">
+            <CurrencyEuroIcon className="h-5 w-5 md:h-6 md:w-6 lg:h-7 lg:w-7 text-white/80" />
+            <span className="text-sm md:text-base lg:text-lg font-medium text-white/90">
               {t('finances.box.pitchDecksFree')}
             </span>
           </div>
-          <span className="text-lg font-bold text-white">
+          <span className="text-lg md:text-xl lg:text-2xl font-bold text-white">
             {formatCurrency(pitchDeckEarnings)}
           </span>
         </div>
