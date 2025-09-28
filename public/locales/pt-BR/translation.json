@@ -1,0 +1,1318 @@
+{
+    "hero": {
+        "learnFrom": "Aprenda com",
+        "cta": {
+            "title": "Desbloqueie Seu Melhor Eu — Domine Sua Mentalidade, Riqueza e Relacionamentos Hoje",
+            "subtitle": "Da falência ao sucesso de seis dígitos, eu dominei os três pilares — saúde, poder e relacionamentos. Agora estou aqui para ajudar você a transformar reveses em um trampolim para um crescimento extraordinário."
+        },
+        "wordCarousel": [
+            "Dinheiro",
+            "Saúde",
+            "Relacionamentos",
+            "Mentalidade",
+            "Redes Sociais",
+            "Negócios"
+        ],
+        "featureCarousel": [
+            {
+                "title": "$140K+ / ano",
+                "subtitle": "de receita para minha empresa"
+            },
+            {
+                "title": "Top 1% em ganhos",
+                "subtitle": "no OnlyFans (global)"
+            },
+            {
+                "title": "200K+",
+                "subtitle": "seguidores no OnlyFans"
+            },
+            {
+                "title": "69 dias",
+                "subtitle": "transformação corporal completa"
+            },
+            {
+                "title": "4 países",
+                "subtitle": "morei em várias nações"
+            },
+            {
+                "title": "Adicção",
+                "subtitle": "superei sozinho"
+            },
+            {
+                "title": "Depressão",
+                "subtitle": "superei por conta própria, sem remédios"
+            },
+            {
+                "title": "6+ idiomas",
+                "subtitle": "fluente em vários idiomas"
+            },
+            {
+                "title": "100K+",
+                "subtitle": "conteúdo alcançando centenas de milhares"
+            },
+            {
+                "title": "Miss Portugal",
+                "subtitle": "gerenciei a campeã 2019/2020"
+            },
+            {
+                "title": "$10K+ por mês",
+                "subtitle": "ajudei clientes a alcançar liberdade financeira"
+            },
+            {
+                "title": "+10 anos",
+                "subtitle": "de experiência no mercado de ações"
+            },
+            {
+                "title": "Milhares de ações",
+                "subtitle": "pesquisadas por análise fundamentalista"
+            },
+            {
+                "title": "8 anos",
+                "subtitle": "em um relacionamento estável e duradouro"
+            },
+            {
+                "title": "0 a 60k+",
+                "subtitle": "fiz clientes crescerem em várias plataformas"
+            },
+            {
+                "title": "Dezenas de milhares",
+                "subtitle": "de horas pesquisando temas fundamentais"
+            },
+            {
+                "title": "Aos 13 anos",
+                "subtitle": "meu site alcançou 60K+ usuários"
+            }
+        ],
+        "services": {
+            "consultation": {
+                "title": "Consulta Individual",
+                "price": "90€/hora",
+                "minDuration": "Mínimo de 45 minutos",
+                "button": "Agendar uma Consulta",
+                "learnMore": "Saiba Mais"
+            },
+            "coaching": {
+                "title": "Mentoria Direta",
+                "spots": "Vagas Limitadas",
+                "button": "Receber meu número",
+                "selectPlan": "Receber meu número",
+                "learnMore": "Saiba Mais",
+                "tiers": {
+                    "basic": "Básico",
+                    "standard": "Padrão",
+                    "premium": "Premium"
+                }
+            },
+            "investment": {
+                "title": "Invista Comigo",
+                "description": "Estou sempre lançando novos empreendimentos. Para explorar oportunidades atuais e futuras, solicite o pitch deck abaixo.",
+                "button": "Solicitar Pitch Deck",
+                "learnMore": "Saiba Mais"
+            }
+        }
+    },
+    "aboutMe": {
+        "title": "Conheça Daniel DaGalow",
+        "body": "Depois de atingir o fundo do poço várias vezes e construir um sucesso de seis dígitos, eu aprendi a transformar contratempos em degraus. Minha missão? Ajudar você a usar sua saúde, seu poder e seus relacionamentos para se tornar a melhor versão de si mesmo. Vamos reescrever sua história de sucesso juntos."
+    },
+    "consultations": {
+        "title": "Como Posso Ajudar Você",
+        "subtitle": "Se você precisa de orientação sobre mentalidade, crescimento nas redes sociais, finanças, marketing, construção de negócios ou relacionamentos — eu cubro tudo isso.",
+        "types": [
+            {
+                "title": "Mentalidade & Psicologia",
+                "description": "Desbloqueie o poder da sua mente. Nosso serviço de Mentalidade & Psicologia oferece ferramentas e estratégias para superar crenças limitantes, aumentar a resiliência mental e cultivar uma mentalidade de crescimento. Alcance clareza, foco e equilíbrio emocional para se destacar em todas as áreas da sua vida."
+            },
+            {
+                "title": "Crescimento nas Redes Sociais",
+                "description": "Amplifique sua presença online. Vamos ajudar você a criar uma estratégia vencedora para redes sociais, produzir conteúdo envolvente e crescer sua audiência de forma eficaz. Esta descrição é um pouco mais longa para testar como a animação lida com diferentes comprimentos de texto e garantir fluidez."
+            },
+            {
+                "title": "Finanças & Riqueza",
+                "description": "Assuma o controle do seu futuro financeiro. Aprenda princípios sólidos de investimento, técnicas de orçamento e estratégias de construção de riqueza adaptadas aos seus objetivos."
+            },
+            {
+                "title": "Marketing & Vendas",
+                "description": "Impulsione sua marca e suas vendas. Oferecemos estratégias de marketing, desde campanhas digitais até alcance tradicional, para ajudar você a atingir seu público-alvo."
+            },
+            {
+                "title": "Construção de Negócios",
+                "description": "Transforme sua visão em realidade. Receba orientação sobre planejamento de negócios, eficiência operacional e escala sustentável. Outra descrição mais longa para verificar a suavidade da animação quando o conteúdo varia significativamente. Isso deve empurrar os itens abaixo ainda mais para baixo, e a animação deve permanecer fluida durante todo o processo de expansão e contração, sem travamentos, especialmente perto do fim da sequência."
+            },
+            {
+                "title": "Relacionamentos",
+                "description": "Fortaleça conexões profundas. Melhore a comunicação, construa laços mais fortes e navegue desafios relacionais com aconselhamento especializado."
+            },
+            {
+                "title": "Saúde & Fitness",
+                "description": "Alcance seu ápice físico. Planos de treino personalizados, orientação nutricional e suporte motivacional para ajudar você a atingir suas metas de saúde."
+            },
+            {
+                "title": "OnlyFans",
+                "description": "Maximize seu sucesso no OnlyFans. Estratégias para criação de conteúdo, promoção e engajamento de assinantes para aumentar seus ganhos."
+            },
+            {
+                "title": "IA & Tecnologia",
+                "description": "Aproveite tecnologia de ponta. Explore como IA e outras soluções tecnológicas podem otimizar seu negócio e sua produtividade pessoal."
+            },
+            {
+                "title": "Conselhos de Vida",
+                "description": "Tem outras necessidades? Vamos conversar! Oferecemos uma ampla gama de serviços de consultoria e podemos adaptar soluções aos seus desafios únicos. Este é um caso final de teste com uma descrição de comprimento médio."
+            }
+        ],
+        "details": [
+            {
+                "title": "Videochamada Cara a Cara",
+                "description": "Nossas consultas acontecem por videochamada, permitindo uma conexão pessoal. Você poderá me ver durante toda a sessão, criando uma experiência mais envolvente e próxima."
+            },
+            {
+                "title": "Sessões de no mínimo 45 minutos",
+                "description": "Cada consulta tem duração mínima de 45 minutos, garantindo tempo adequado para explorar suas questões em profundidade e desenvolver insights e planos de ação."
+            },
+            {
+                "title": "Gravações da Sessão",
+                "description": "Participe de uma videochamada individual para discutir seus desafios e oportunidades."
+            },
+            {
+                "title": "E-mail de Acompanhamento",
+                "description": "Após a sua sessão, você receberá um e-mail personalizado com os pontos-chave e próximos passos, garantindo que você se mantenha no caminho certo."
+            },
+            {
+                "title": "Consulta de Acompanhamento",
+                "description": "Agende uma consulta de acompanhamento para revisar seu progresso, abordar novos desafios e receber suporte contínuo na sua jornada."
+            }
+        ],
+        "buttons": {
+            "default": "Agendar uma Consulta - 90€/h",
+            "mindset": "Transformar sua Mentalidade - 90€/h",
+            "social": "Impulsionar suas Redes Sociais - 90€/h",
+            "finance": "Dominar suas Finanças - 90€/h",
+            "marketing": "Elevar seu Marketing - 90€/h",
+            "business": "Construir seu Negócio - 90€/h",
+            "relationships": "Melhorar Relacionamentos - 90€/h",
+            "health": "Alcançar Metas de Fitness - 90€/h",
+            "onlyfans": "Crescer no OnlyFans - 90€/h",
+            "ai": "Aproveitar IA & Tech - 90€/h",
+            "life": "Conselhos de Vida - 90€/h"
+        },
+        "box": {
+            "title": "Consultas",
+            "empty": "Nenhuma consulta ainda",
+            "more_one": "+{{count}} consulta a mais",
+            "more_other": "+{{count}} consultas a mais",
+            "status": {
+                "confirmed": "Confirmado"
+            },
+            "duration": {
+                "minutes_one": "{{count}} min",
+                "minutes_other": "{{count}} min",
+                "hoursOnly_one": "{{count}}h",
+                "hoursOnly_other": "{{count}}h",
+                "hoursAndMinutes": "{{hours}}h {{minutes}}min"
+            }
+        }
+    },
+    "coaching": {
+        "title": "Mentoria Direta",
+        "subtitle": "Mentoria personalizada para ajudar você a se destacar em áreas específicas da sua vida. Tenha acesso direto a orientação de um especialista, adaptada à sua situação e aos seus objetivos.",
+        "types": [
+            {
+                "title": "Aprenda a Investir",
+                "description": "Domine os mercados com confiança. Explicamos os princípios centrais de investimento, alocação de ativos e táticas de gestão de risco para você construir uma carteira diversificada que combine com seus objetivos e apetite de risco."
+            },
+            {
+                "title": "Personal Trainer",
+                "description": "Receba um plano de condicionamento sob medida. De treinos periodizados a ajustes de nutrição e acompanhamento de hábitos, você terá orientação passo a passo para alcançar metas de força, resistência e estética — com segurança e sustentabilidade."
+            },
+            {
+                "title": "Coach de Relacionamentos",
+                "description": "Evolua sua vida amorosa. Aperfeiçoe fundamentos de habilidades sociais, crie um perfil online magnético e aprenda estruturas de abordagem no mundo real que aumentam a confiança e atraem parceiros de alta qualidade."
+            },
+            {
+                "title": "Mentoria para OnlyFans",
+                "description": "Transforme o OnlyFans em um negócio próspero. Cobrimos posicionamento de nicho, calendários de conteúdo, psicologia de preços, funil de fãs e promoção multiplataforma para escalar assinantes e ganhos mensais."
+            },
+            {
+                "title": "Consultor de Negócios",
+                "description": "Acelere o crescimento do seu empreendimento. De auditorias enxutas de plano de negócios a funis de marketing, sistemas operacionais e painéis de KPIs, você receberá estratégias acionáveis para aumentar receita e lucratividade."
+            },
+            {
+                "title": "Hábitos & Crescimento Pessoal",
+                "description": "Projete hábitos que permanecem. Implemente rotinas baseadas em ciência para produtividade, saúde e mentalidade, eliminando comportamentos de auto-sabotagem com ciclos de responsabilidade e revisões de progresso."
+            },
+            {
+                "title": "Gerente de Redes Sociais",
+                "description": "Cresça uma audiência engajada. Receba mapeamento de pilares de conteúdo, agendas de postagem à prova de algoritmo, análises aprofundadas e táticas de monetização para transformar seguidores em clientes fiéis."
+            },
+            {
+                "title": "Pesquisador de Ações",
+                "description": "Faça operações orientadas por dados. Aprenda fluxos de pesquisa fundamentalista e técnica, modelos de avaliação e curadoria de watchlist para identificar oportunidades de alta convicção antes da maioria."
+            }
+        ],
+        "details": [
+            {
+                "title": "Comunicação a Qualquer Momento",
+                "description": "Envie mensagens de texto ou áudios a qualquer momento com dúvidas, atualizações ou desafios. Receba suporte quando mais precisar, sem esperar por horários agendados."
+            },
+            {
+                "title": "Formatos de Resposta Flexíveis",
+                "description": "Receba orientação por texto, áudio ou vídeo, conforme sua preferência e a complexidade do tema. Demonstrações visuais quando necessário; respostas rápidas por texto quando apropriado."
+            },
+            {
+                "title": "Aulas Personalizadas",
+                "description": "Receba sessões de treinamento sob medida para seu nível, estilo de aprendizagem e metas. Cada aula se baseia no seu progresso para maximizar crescimento e desenvolvimento."
+            },
+            {
+                "title": "Comunicação a Qualquer Momento",
+                "description": "Envie mensagens de texto ou áudios a qualquer momento com dúvidas, atualizações ou desafios. Receba suporte quando mais precisar, sem esperar por horários agendados."
+            },
+            {
+                "title": "Formatos de Resposta Flexíveis",
+                "description": "Receba orientação por texto, áudio ou vídeo, conforme sua preferência e a complexidade do tema. Demonstrações visuais quando necessário; respostas rápidas por texto quando apropriado."
+            },
+            {
+                "title": "Aulas Personalizadas",
+                "description": "Receba sessões de treinamento sob medida para seu nível, estilo de aprendizagem e metas. Cada aula se baseia no seu progresso para maximizar crescimento e desenvolvimento."
+            }
+        ],
+        "tiers": [
+            {
+                "planName": "Basic",
+                "planDesc": "Respostas a todas as perguntas semanalmente"
+            },
+            {
+                "planName": "Standard",
+                "planDesc": "Respostas a todas as perguntas em até 48h"
+            },
+            {
+                "planName": "Premium",
+                "planDesc": "Respostas a todas as perguntas o quanto antes"
+            }
+        ],
+        "buttons": {
+            "default": "Receber meu número",
+            "invest": "Comece a Investir Melhor",
+            "trainer": "Receba seu Plano de Treino",
+            "dating": "Melhore sua Vida Amorosa",
+            "onlyfans": "Impulsione seu OnlyFans",
+            "advisor": "Impulsionar seu Negócio",
+            "habits": "Construa Melhores Hábitos",
+            "manager": "Destaque-se nas Redes Sociais",
+            "researcher": "Navegue pelo Mercado de Ações"
+        }
+    },
+    "pitchDeck": {
+        "title": "Meus Empreendimentos",
+        "investTitle": "Invista Comigo",
+        "investSubtitle": "Estou constantemente desenvolvendo novos projetos e empreendimentos. Se quiser saber mais sobre oportunidades atuais e futuras, solicite um pitch deck abaixo.",
+        "buttonText": "Solicitar Pitch Deck",
+        "decks": [
+            {
+                "title": "Perspectiv - Empresa de IA",
+                "description": "Uma startup de tecnologia que ajuda empresas a entrar na era da automação, com soluções de software sob medida."
+            },
+            {
+                "title": "Galow - Clube de Sucesso",
+                "description": "Um clube social com atividades no mundo real e software digital para ajudar pessoas bem-sucedidas a se conectarem e realizarem seus sonhos."
+            }
+        ],
+        "box": {
+            "title": "Solicitações de Pitch Deck",
+            "untitled": "Solicitação sem título",
+            "empty": "Nenhuma solicitação de pitch deck ainda",
+            "more_one": "+{{count}} solicitação a mais",
+            "more_other": "+{{count}} solicitações a mais",
+            "status": {
+                "submitted": "Enviado",
+                "in_review": "Em análise",
+                "feedback_sent": "Feedback enviado",
+                "archived": "Arquivado"
+            }
+        }
+    },
+    "testimonials": {
+        "title": "Histórias de Sucesso",
+        "subtitle": "Aqui estão algumas avaliações — e se eu já ajudei você, deixe a sua para inspirarmos ainda mais pessoas.",
+        "noTestimonials": "Ainda não há depoimentos. Seja o primeiro!",
+        "leaveButton": "Deixar um Depoimento",
+        "review": {
+            "anonymous": "Anônimo",
+            "approve": "Aprovar",
+            "reject": "Rejeitar"
+        }
+    },
+    "addTestimonial": {
+        "title": "Deixar um Depoimento",
+        "changePhoto": "Trocar Foto",
+        "uploadPhoto": "Enviar Foto",
+        "optional": "(Opcional)",
+        "yourNameLabel": "Seu Nome",
+        "yourNameRequired": "Seu nome é obrigatório.",
+        "testimonialLabel": "Depoimento",
+        "testimonialRequired": "O conteúdo do depoimento é obrigatório.",
+        "testimonialMaxLength": "O depoimento não pode exceder 120 caracteres.",
+        "submitting": "Enviando...",
+        "submitButton": "Enviar Depoimento"
+    },
+    "otherWins": {
+        "title": "Outras Conquistas",
+        "bodyTransformation": "Transformação Corporal em 69 Dias",
+        "socialMedia": "Também tenho um histórico de sucesso nas redes sociais, especialmente no Twitter, onde cresci uma audiência de mais de 200.000 seguidores."
+    },
+    "mediaAppearances": {
+        "title": "Aparições na Mídia",
+        "subtitle": "Tive o privilégio de compartilhar minhas ideias e histórias com diversos veículos. Explore algumas dessas matérias abaixo.",
+        "mainImageAlt": "Destaque principal na mídia",
+        "links": [
+            {
+                "altText": "Uma captura do artigo no Correio da Manhã."
+            },
+            {
+                "altText": "Uma imagem da entrevista ao Jornal de Notícias."
+            },
+            {
+                "altText": "Peça promocional de participação em podcast com Coutinho."
+            }
+        ]
+    },
+    "signup": {
+        "title": "Crie Sua Conta",
+        "subtitle": "Junte-se à nossa comunidade para liberar conteúdo exclusivo, salvar seu progresso e se conectar com outras pessoas.",
+        "form": {
+            "nameLabel": "Nome",
+            "namePlaceholder": "Seu nome",
+            "emailLabel": "Email",
+            "emailPlaceholder": "voce@exemplo.com",
+            "passwordLabel": "Senha",
+            "passwordPlaceholder": "••••••••",
+            "confirmPasswordLabel": "Confirmar senha",
+            "orSeparator": "ou",
+            "loginPrompt": "Já tem uma conta?",
+            "loginLink": "Entrar",
+            "validation": {
+                "emailRequired": "Email é obrigatório",
+                "passwordRequired": "Senha é obrigatória",
+                "passwordMinLength": "A senha deve ter pelo menos 6 caracteres",
+                "passwordsNoMatch": "As senhas não coincidem"
+            }
+        },
+        "cta": "Criar conta"
+    },
+    "login": {
+        "form": {
+            "emailLabel": "Email",
+            "emailPlaceholder": "voce@exemplo.com",
+            "passwordLabel": "Senha",
+            "passwordPlaceholder": "••••••••",
+            "rememberMe": "Lembrar de mim",
+            "forgotPassword": "Esqueceu a senha?",
+            "submit": "Entrar",
+            "orSeparator": "ou",
+            "signupPrompt": "Não tem uma conta?",
+            "signupLink": "Crie uma",
+            "validation": {
+                "emailRequired": "Email é obrigatório",
+                "passwordRequired": "Senha é obrigatória"
+            }
+        }
+    },
+    "forgot": {
+        "form": {
+            "emailLabel": "Digite o email da sua conta",
+            "emailPlaceholder": "conta@email.com",
+            "submit": "Enviar link de redefinição",
+            "backTo": "Voltar para",
+            "loginLink": "Entrar",
+            "validation": {
+                "emailRequired": "Email é obrigatório"
+            }
+        }
+    },
+    "chatWithMe": {
+        "title": "Assistência Inteligente",
+        "subtitle": "Em breve apresentaremos um assistente guiado para agilizar agendamentos e preparação.",
+        "iconAltText": "Ícone do assistente",
+        "iconLabel": "Assistente",
+        "buttonText": "Chatbot"
+    },
+    "scheduling": {
+        "serviceSelection": {
+            "title": "Escolha seu Serviço",
+            "serviceLabels": {
+                "consultation": "Consultas",
+                "coaching": "Mentoria",
+                "pitchdeck": "Pitch Deck"
+            }
+        },
+        "title": "Agende Sua Consulta",
+        "backButton": "Voltar",
+        "nextButton": "Avançar",
+        "finishButton": "Concluir",
+        "durationSelectorTitle": "Selecione a Duração",
+        "timeSelectorTitle": "Selecione o Horário Disponível",
+        "appointmentSummary": {
+            "from": "De",
+            "to": "Até",
+            "duration": "Duração",
+            "minutesShort": "min"
+        },
+        "durationOptions": [
+            {
+                "value": "45",
+                "label": "45 min"
+            },
+            {
+                "value": "60",
+                "label": "1h"
+            },
+            {
+                "value": "75",
+                "label": "1h 15min"
+            },
+            {
+                "value": "90",
+                "label": "1h 30min"
+            },
+            {
+                "value": "105",
+                "label": "1h 45min"
+            },
+            {
+                "value": "120",
+                "label": "2h"
+            }
+        ],
+        "coachingPlan": {
+            "title": "Plano de Mentoria",
+            "plans": [
+                {
+                    "id": "basic",
+                    "title": "Plano Básico"
+                },
+                {
+                    "id": "standard",
+                    "title": "Standard"
+                },
+                {
+                    "id": "premium",
+                    "title": "Premium"
+                }
+            ]
+        },
+        "pitchDeck": {
+            "title": "Solicitar Pitch Deck",
+            "decks": [
+                {
+                    "id": "Perspectiv",
+                    "title": "Perspectiv"
+                },
+                {
+                    "id": "GalowClub",
+                    "title": "Galow Club"
+                }
+            ]
+        },
+        "contactInfo": {
+            "loggedInTitle": "Informações de Contato",
+            "loggedOutTitle": "Fale Sobre Você",
+            "fullNameLabel": "Nome Completo",
+            "fullNamePlaceholder": "Digite seu nome completo",
+            "emailLabel": "Email",
+            "emailPlaceholder": "voce@exemplo.com",
+            "phoneLabel": "Telefone",
+            "phonePlaceholder": "+55 (11) 99999-9999",
+            "passwordLabel": "Criar Senha",
+            "passwordPlaceholder": "**********",
+            "googleButtonText": "Cadastre-se com o Google",
+            "loginPrompt": "Já tem uma conta?",
+            "loginLink": "Entrar"
+        },
+        "paymentStep": {
+            "cancelledTitle": "Pagamento Cancelado",
+            "cancelledMessage": "Seu pagamento foi cancelado. Você pode tentar novamente.",
+            "payButton": "Pagar {{price}}",
+            "processingButton": "Processando...",
+            "summaryTitle": "Resumo do Pedido",
+            "consultationTitle": "Consulta",
+            "dateLabel": "Data",
+            "timeLabel": "Hora",
+            "durationLabel": "Duração",
+            "minutes": "minutos",
+            "coachingPlanTitle": "Plano de Mentoria",
+            "planLabel": "Plano",
+            "totalLabel": "Total",
+            "redirectingButton": "Redirecionando...",
+            "checkoutButton": "Prosseguir para o Pagamento",
+            "stripeRedirectMessage": "Você será redirecionado ao Stripe para concluir o pagamento."
+        },
+        "confirmation": {
+            "title": "Confirmação"
+        }
+    },
+    "socialMedia": {
+        "title": "Siga-me em",
+        "links": [
+            {
+                "altText": "Siga-me no Instagram"
+            },
+            {
+                "altText": "Siga-me no TikTok"
+            },
+            {
+                "altText": "Siga-me no X"
+            }
+        ]
+    },
+    "faq": {
+        "title": "Perguntas Frequentes sobre os Serviços",
+        "items": [
+            {
+                "question": "Quais canais de comunicação você usa para a mentoria?",
+                "answer": "Toda a comunicação da mentoria acontece via WhatsApp para uma interação prática e contínua. Isso permite compartilhar textos, imagens, áudios e documentos com facilidade, mantendo um único histórico organizado das conversas."
+            },
+            {
+                "question": "Para quem é esse serviço?",
+                "answer": "Este serviço é voltado para fundadores, empreendedores e líderes de negócios ambiciosos que desejam escalar suas operações e precisam de orientação especializada para navegar os desafios do crescimento."
+            },
+            {
+                "question": "Como as sessões são estruturadas?",
+                "answer": "Nossas sessões combinam planejamento estratégico, resolução de problemas e check-ins de responsabilidade. Cada encontro é adaptado às suas prioridades imediatas e metas de longo prazo."
+            },
+            {
+                "question": "E se eu precisar remarcar uma sessão?",
+                "answer": "Entendemos que agendas mudam. Você pode remarcar qualquer sessão com pelo menos 24 horas de antecedência através do nosso portal de agendamento online."
+            },
+            {
+                "question": "Você oferece sessões de mentoria em grupo?",
+                "answer": "Atualmente, todos os serviços de mentoria são individuais para garantir uma experiência altamente personalizada. Porém, estamos considerando workshops em grupo no futuro. Inscreva-se na nossa newsletter para receber atualizações."
+            },
+            {
+                "question": "Qual é a sua política de reembolso?",
+                "answer": "Para consultas avulsas, oferecemos reembolso se você cancelar com pelo menos 48 horas de antecedência. Para pacotes de mentoria, oferecemos reembolso proporcional à parte não utilizada do serviço."
+            },
+            {
+                "question": "Como vocês medem o sucesso?",
+                "answer": "O sucesso é um métrico colaborativo definido no início do nosso trabalho. Estabelecemos KPIs (Indicadores-Chave de Desempenho) claros com base nas suas metas — seja crescimento de receita, aquisição de usuários ou marcos de desenvolvimento pessoal."
+            }
+        ]
+    },
+    "bugReport": {
+        "title": "Ajude-me a Melhorar",
+        "subtitle": "Como o site está em beta, seu feedback é essencial. Forneça detalhes sobre quaisquer problemas encontrados para nos ajudar a aprimorar a experiência do usuário.",
+        "success": {
+            "title": "Obrigado!",
+            "message": "Seu relatório de bug foi enviado com sucesso. Agradecemos sua ajuda para melhorar nossa plataforma.",
+            "button": "Enviar outro relatório"
+        },
+        "loggedOut": {
+            "message": "Para reportar um bug, crie uma conta primeiro. Isso nos ajuda a rastrear os problemas e dar retorno a você."
+        },
+        "form": {
+            "name": {
+                "label": "Nome",
+                "required": "Nome é obrigatório"
+            },
+            "email": {
+                "label": "Email",
+                "required": "Email é obrigatório"
+            },
+            "description": {
+                "label": "Descrição do Bug",
+                "required": "Descreva o problema em detalhes",
+                "placeholder": "Explique os passos para reproduzir o bug, o que você esperava que acontecesse e o que aconteceu de fato."
+            },
+            "image": {
+                "label": "Captura de tela (Opcional)",
+                "optional": "opcional",
+                "uploadText": "Enviar uma imagem",
+                "helpText": "PNG, JPG, GIF até 10MB"
+            },
+            "submitButton": "Enviar Relatório de Bug"
+        }
+    },
+    "sidebar": {
+        "mainPages": [
+            {
+                "label": "Início"
+            },
+            {
+                "label": "Perfil"
+            },
+            {
+                "label": "Chat"
+            },
+            {
+                "label": "Calendário"
+            }
+        ],
+        "explore": "Explorar",
+        "exploreLinks": [
+            {
+                "label": "Como Posso Ajudar Você"
+            },
+            {
+                "label": "Mentoria Direta"
+            },
+            {
+                "label": "Invista Comigo"
+            },
+            {
+                "label": "Histórias de Sucesso"
+            },
+            {
+                "label": "Aparições na Mídia"
+            },
+            {
+                "label": "Outras Conquistas"
+            },
+            {
+                "label": "Redes Sociais"
+            },
+            {
+                "label": "FAQs"
+            },
+            {
+                "label": "Bugs"
+            }
+        ],
+        "settings": "Configurações",
+        "logout": "Sair"
+    },
+    "notifications": {
+        "pageTitle": "Notificações",
+        "loading": "Carregando notificações...",
+        "noNotifications": "Você não tem notificações no momento.",
+        "markAllAsRead": "Marcar todas como lidas ({{count}})",
+        "unreadAriaLabel": "Notificação não lida",
+        "bellAriaLabel": "Abrir notificações ({{count}} não lidas)",
+        "bellIconAlt": "Notificações",
+        "panel": {
+            "title": "Notificações",
+            "markAllAsRead": "Marcar todas como lidas",
+            "loading": "Carregando...",
+            "noNotifications": "Ainda não há notificações."
+        },
+        "types": {
+            "newMessage": "<0>{{sender}}</0> enviou uma nova mensagem.",
+            "consultationReminder": "Lembrete: Sua consulta é amanhã às <0>{{time}}</0>.",
+            "newConsultationBooking": "Nova reserva: Um usuário comprou uma <0>Consulta</0>.",
+            "default": "Você tem uma nova notificação."
+        }
+    },
+    "accountSettings": {
+        "page": {
+            "title": "Configurações",
+            "sidebarAria": "Seções de configurações da conta",
+            "tabsAria": "Abas de configurações da conta",
+            "nav": {
+                "profile": "Perfil",
+                "security": "Segurança",
+                "billing": "Faturamento e Pagamentos",
+                "notifications": "Notificações",
+                "privacy": "Privacidade e Dados",
+                "connections": "Apps Conectados",
+                "devices": "Sessões e Dispositivos",
+                "locale": "Idioma e Acessibilidade",
+                "legal": "Jurídico",
+                "danger": "Zona de Risco"
+            },
+            "common": {
+                "saveChanges": "Salvar alterações",
+                "savePreferences": "Salvar preferências",
+                "saved": "Salvo"
+            },
+            "profile": {
+                "title": "Perfil público",
+                "desc": "Controle como seu perfil aparece para outras pessoas.",
+                "name": "Nome",
+                "username": "Nome de usuário",
+                "website": "Site",
+                "saveProfile": "Salvar perfil",
+                "exampleName": "Seu Nome"
+            },
+            "contact": {
+                "title": "Contato e conta",
+                "desc": "Email e telefone são mantidos em sigilo.",
+                "email": "Email",
+                "phone": "Telefone (para recibos / 2FA)",
+                "timezone": "Fuso horário",
+                "sendVerification": "Enviar email de verificação"
+            },
+            "security": {
+                "passwordTitle": "Senha",
+                "passwordDesc": "Use uma senha forte. Suportamos passphrases.",
+                "newPassword": "Nova senha",
+                "updatePasswordBtn": "Atualizar senha",
+                "passwordUpdated": "Senha atualizada.",
+                "twofaTitle": "Autenticação em duas etapas",
+                "twofaDesc": "Adicione uma camada extra de segurança usando um app autenticador.",
+                "twofaEnabledNote": "2FA está ativado. Salve seus códigos de backup e mantenha-os em segurança.",
+                "downloadBackupCodes": "Baixar códigos de backup",
+                "regenerate": "Regenerar",
+                "protectTitle": "Proteja sua conta",
+                "protectSubtitle": "Ative 2FA para ajudar a evitar sequestro de conta.",
+                "appPasswordsTitle": "Senhas de app",
+                "appPasswordsDesc": "Gere senhas específicas para clientes legados.",
+                "noAppPasswords": "Sem senhas de app",
+                "noAppPasswordsSubtitle": "Crie uma se precisar conectar clientes antigos.",
+                "generate": "Gerar"
+            },
+            "billing": {
+                "title": "Faturamento e Pagamentos",
+                "defaultUpdated": "Método de pagamento padrão atualizado.",
+                "removeConfirm": "Remover este método de pagamento?",
+                "removed": "Removido",
+                "default": "Padrão",
+                "makeDefault": "Definir como padrão",
+                "remove": "Remover",
+                "exp": "Exp {{exp}}"
+            },
+            "subscription": {
+                "title": "Assinatura",
+                "desc": "Gerencie seu plano, faturas e detalhes de pagamento.",
+                "status": "Status",
+                "renewsOn": "Renova em {{date}}",
+                "openPortal": "Abrir portal do cliente",
+                "changePlan": "Mudar plano"
+            },
+            "paymentMethods": {
+                "title": "Formas de pagamento",
+                "desc": "Adicione, remova ou defina um cartão padrão.",
+                "emptyTitle": "Nenhuma forma de pagamento",
+                "emptySubtitle": "Adicione um cartão para iniciar sua assinatura.",
+                "add": "Adicionar forma de pagamento"
+            },
+            "invoices": {
+                "title": "Faturas e recibos",
+                "empty": "Ainda não há faturas",
+                "download": "Baixar",
+                "cols": {
+                    "number": "Número",
+                    "date": "Data",
+                    "amount": "Valor",
+                    "status": "Status",
+                    "action": "Ação"
+                },
+                "status": {
+                    "paid": "Paga",
+                    "open": "Em aberto"
+                }
+            },
+            "notifications": {
+                "title": "Notificações por email",
+                "desc": "Escolha o que enviamos para você por email.",
+                "product": "Atualizações do produto",
+                "billing": "Faturamento e recibos",
+                "security": "Alertas de segurança",
+                "marketing": "Marketing e newsletter",
+                "digest": "Resumo periódico",
+                "digestOff": "Desativado",
+                "digestDaily": "Diário",
+                "digestWeekly": "Semanal",
+                "digestMonthly": "Mensal"
+            },
+            "privacy": {
+                "title": "Controles de privacidade",
+                "desc": "Controle análises e experiências personalizadas.",
+                "analytics": "Permitir análises anônimas",
+                "analyticsDesc": "Usamos análises de uso para melhorar o produto.",
+                "personalized": "Conteúdo personalizado",
+                "personalizedDesc": "Ajuste de conteúdo com base na sua atividade.",
+                "retention": "Retenção de chats e dados",
+                "retention30d": "30 dias",
+                "retention3m": "3 meses",
+                "retention6m": "6 meses",
+                "retention12m": "12 meses",
+                "retentionForever": "Manter até exclusão",
+                "savePrivacy": "Salvar configurações de privacidade",
+                "exportOk": "Exportação iniciada / pronta.",
+                "exportFail": "Falhou"
+            },
+            "data": {
+                "title": "Seus dados",
+                "desc": "Exporte ou exclua seus dados a qualquer momento.",
+                "export": "Exportar meus dados",
+                "requestReport": "Solicitar relatório de dados"
+            },
+            "connections": {
+                "title": "Contas conectadas",
+                "desc": "Vincule ou desvincule logins sociais.",
+                "connect": "Conectar",
+                "disconnect": "Desconectar"
+            },
+            "devices": {
+                "title": "Sessões ativas",
+                "desc": "Dispositivos com acesso à sua conta.",
+                "empty": "Nenhuma sessão ativa",
+                "thisDevice": "Este dispositivo",
+                "revoke": "Revogar",
+                "historyTitle": "Histórico de login",
+                "historyDesc": "Eventos recentes de segurança"
+            },
+            "locale": {
+                "title": "Idioma e região",
+                "language": "Idioma"
+            },
+            "accessibility": {
+                "title": "Acessibilidade e aparência",
+                "theme": "Tema",
+                "themeLight": "Claro",
+                "themeDark": "Escuro",
+                "themeSystem": "Sistema",
+                "fontSize": "Tamanho da fonte",
+                "fontSmall": "Pequena",
+                "fontDefault": "Padrão",
+                "fontLarge": "Grande",
+                "reduceMotion": "Reduzir movimento"
+            },
+            "legal": {
+                "title": "Jurídico",
+                "desc": "Nossas políticas e acordos.",
+                "privacyPolicy": "Política de Privacidade",
+                "termsOfService": "Termos de Serviço",
+                "refundPolicy": "Política de Reembolso",
+                "dpa": "Aditivo de Processamento de Dados"
+            },
+            "danger": {
+                "title": "Zona de risco",
+                "desc": "Exclua sua conta e todos os dados associados. Esta ação é irreversível.",
+                "note": "Todas as assinaturas ativas serão canceladas. As faturas permanecem por conformidade fiscal.",
+                "deleteBtn": "Excluir conta",
+                "confirmBtn": "Clique para confirmar",
+                "deletedRedirect": "Conta excluída. Redirecionando para o cadastro…"
+            }
+        },
+        "box": {
+            "title": "$t(accountSettings.pageTitle)",
+            "email": {
+                "label": "Email"
+            },
+            "created": {
+                "label": "Conta criada"
+            },
+            "settings": {
+                "label": "Configurações",
+                "description": "Gerencie suas preferências de conta"
+            }
+        }
+    },
+    "privacyPolicy": {
+        "title": "Política de Privacidade",
+        "lead": "Última atualização: 12 de julho de 2025",
+        "content": [
+            {
+                "type": "p",
+                "text": "Na DaGalow, respeitamos sua privacidade e estamos comprometidos em proteger seus dados pessoais. Esta Política de Privacidade explica como coletamos, usamos e protegemos suas informações quando você utiliza nosso site e serviços."
+            },
+            {
+                "type": "h4",
+                "text": "1. Informações que Coletamos"
+            },
+            {
+                "type": "p",
+                "text": "Coletamos as informações que você fornece diretamente para nós, incluindo:"
+            },
+            {
+                "type": "ul",
+                "items": [
+                    "Informações pessoais (nome, endereço de email, número de telefone)",
+                    "Informações de perfil",
+                    "Informações de pagamento e transações",
+                    "Comunicações que você nos envia",
+                    "Informações de uso e interação com nossos serviços"
+                ]
+            },
+            {
+                "type": "h4",
+                "text": "2. Como Usamos Suas Informações"
+            },
+            {
+                "type": "p",
+                "text": "Usamos suas informações para:"
+            },
+            {
+                "type": "ul",
+                "items": [
+                    "Fornecer, manter e aprimorar nossos serviços",
+                    "Processar transações e enviar informações relacionadas",
+                    "Enviar avisos técnicos, atualizações e mensagens de suporte",
+                    "Responder aos seus comentários e perguntas",
+                    "Personalizar sua experiência",
+                    "Monitorar e analisar tendências e uso"
+                ]
+            },
+            {
+                "type": "h4",
+                "text": "3. Compartilhamento de Informações"
+            },
+            {
+                "type": "p",
+                "text": "Podemos compartilhar suas informações com provedores de serviço que realizam serviços em nosso nome, processadores de pagamento, consultores profissionais e quando exigido por lei ou para proteger direitos."
+            },
+            {
+                "type": "h4",
+                "text": "4. Seus Direitos"
+            },
+            {
+                "type": "p",
+                "text": "Dependendo da sua localização, você pode ter direitos de acessar, corrigir, excluir ou restringir o processamento dos seus dados pessoais. Você também pode ter o direito de retirar o consentimento."
+            },
+            {
+                "type": "h4",
+                "text": "5. Fale Conosco"
+            },
+            {
+                "type": "p",
+                "text": "Se você tiver dúvidas sobre esta Política de Privacidade, entre em contato pelo email privacy@dagalow.com"
+            }
+        ]
+    },
+    "termsOfService": {
+        "title": "Termos de Serviço",
+        "lead": "Última atualização: 12 de julho de 2025",
+        "content": [
+            {
+                "type": "p",
+                "text": "Leia estes Termos de Serviço (\"Termos\") com atenção antes de usar o site e os serviços da DaGalow, operados pela DaGalow (\"nós\", \"nos\" ou \"nosso\")."
+            },
+            {
+                "type": "h4",
+                "text": "1. Aceitação dos Termos"
+            },
+            {
+                "type": "p",
+                "text": "Ao acessar ou usar nosso serviço, você concorda em ficar vinculado a estes Termos. Se você discordar de qualquer parte dos termos, não poderá acessar o serviço."
+            },
+            {
+                "type": "h4",
+                "text": "2. Contas de Usuário"
+            },
+            {
+                "type": "p",
+                "text": "Você é responsável por proteger a senha da sua conta e por todas as atividades que ocorrerem nela. Você deve fornecer informações precisas e completas e nos notificar imediatamente sobre qualquer uso não autorizado."
+            },
+            {
+                "type": "h4",
+                "text": "3. Pagamentos e Assinaturas"
+            },
+            {
+                "type": "p",
+                "text": "Para serviços pagos, você concorda em pagar todas as taxas com base nos termos de cobrança vigentes. As assinaturas serão renovadas automaticamente até serem canceladas com pelo menos 24 horas de antecedência ao final do período de cobrança atual."
+            },
+            {
+                "type": "h4",
+                "text": "4. Limitação de Responsabilidade"
+            },
+            {
+                "type": "p",
+                "text": "Em nenhuma circunstância a DaGalow será responsável por quaisquer danos indiretos, incidentais, especiais, consequenciais ou punitivos, incluindo perda de lucros, dados ou reputação."
+            },
+            {
+                "type": "h4",
+                "text": "5. Fale Conosco"
+            },
+            {
+                "type": "p",
+                "text": "Se você tiver dúvidas sobre estes Termos, entre em contato pelo email terms@dagalow.com"
+            }
+        ]
+    },
+    "calendar": {
+        "pageTitle": "Calendário",
+        "pageSubtitle": "Escolha uma data para filtrar suas consultas.",
+        "loading": "Carregando suas consultas...",
+        "error": "Falha ao carregar as consultas. Tente novamente.",
+        "consultationsTitle": "Próximas consultas",
+        "noAppointments": "Nenhuma consulta agendada",
+        "listTitleForDate": "Consultas em {{date}}",
+        "listTitleAll": "Todas as consultas",
+        "showAllButton": "Mostrar tudo",
+        "prevMonth": "Mês anterior",
+        "nextMonth": "Próximo mês"
+    },
+    "chatbot": {
+        "header": {
+            "title": "Assistente de Suporte",
+            "dragHandleAria": "Arraste para redimensionar",
+            "closeAria": "Fechar chat"
+        },
+        "messages": {
+            "initial": "Olá! Sou seu assistente pessoal. Como posso ajudar hoje?",
+            "fetchError": "Desculpe, encontrei um problema.",
+            "connectionError": "Erro: Não foi possível conectar ao assistente.",
+            "avatarAlt": "Avatar do bot"
+        },
+        "input": {
+            "placeholder": "Digite sua mensagem...",
+            "placeholderLoggedOut": "Faça login para conversar...",
+            "buttonAria": "Enviar mensagem",
+            "buttonAriaLoggedOut": "Faça login para conversar",
+            "helperTextLoggedOut": "Você precisa estar logado para usar o chat"
+        },
+        "page": {
+            "header": {
+                "historyTitle": "Histórico do chat",
+                "historyAria": "Abrir histórico do chat",
+                "newTitle": "Nova conversa",
+                "newAria": "Iniciar uma nova conversa"
+            },
+            "inputPlaceholder": "Pergunte-me algo!",
+            "sendAria": "Enviar mensagem",
+            "sendTitle": "Enviar",
+            "typing": "Digitando...",
+            "messages": {
+                "welcomeFallback": "👋 Bem-vindo! Estou aqui para ajudar com os serviços de mentoria do Daniel. Como posso ajudar hoje?",
+                "paymentSuccessAppointment": "🎉 Pagamento realizado com sucesso! Sua consulta foi confirmada. Você receberá um email de confirmação em breve.",
+                "paymentSuccessSubscription": "🎉 Pagamento realizado com sucesso! Sua assinatura de mentoria {{plan}} agora está ativa. Bem-vindo ao programa!",
+                "paymentCancelled": "O pagamento foi cancelado. Nenhuma cobrança foi feita. Fique à vontade para tentar novamente quando quiser!",
+                "notConfigured": "No momento não estou configurado para responder perguntas. Verifique se a chave da API da OpenAI está definida nas variáveis de ambiente (VITE_OPENAI_API_KEY).",
+                "processingError": "Estou com dificuldades para processar seu pedido agora. Tente novamente em instantes.",
+                "quotaError": "Atingi meu limite de uso hoje. Tente novamente mais tarde ou contate o suporte.",
+                "apiKeyError": "Há um problema de configuração com meu serviço de IA. Por favor, contate o suporte.",
+                "networkError": "Erro de rede. Tente novamente."
+            }
+        },
+        "previewToast": {
+            "newFrom": "Novo de Daniel"
+        }
+    },
+    "directMessages": {
+        "title": "Mensagens",
+        "loading": "Carregando...",
+        "conversationList": {
+            "empty": {
+                "title": "Ainda não há conversas.",
+                "subtitle": "Use a barra de busca acima para encontrar alguém e iniciar um chat."
+            }
+        },
+        "userSearch": {
+            "placeholder": "Busque para iniciar um novo chat..."
+        },
+        "chatWindow": {
+            "loading": "Carregando mensagens...",
+            "avatarAlt": "Avatar de {{user}}",
+            "inputPlaceholder": "Digite uma mensagem...",
+            "sendAriaLabel": "Enviar mensagem"
+        }
+    },
+    "profile": {
+        "loading": "Carregando perfil...",
+        "logout": "Sair",
+        "errors": {
+            "load": "Não foi possível carregar o perfil. Tente novamente mais tarde."
+        },
+        "menuItems": [
+            {
+                "label": "Consultas",
+                "key": "appointments"
+            },
+            {
+                "label": "Assinaturas",
+                "key": "subscriptions"
+            },
+            {
+                "label": "Solicitações de Pitch Deck",
+                "key": "pitch-requests"
+            },
+            {
+                "label": "Histórico do Chatbot",
+                "key": "chatbot-history"
+            },
+            {
+                "label": "Conta & Configurações",
+                "key": "account-settings"
+            }
+        ]
+    },
+    "editProfile": {
+        "loading": "Carregando seu perfil...",
+        "photo": {
+            "title": "Foto do perfil",
+            "help": "Use uma imagem nítida e reconhecível."
+        },
+        "form": {
+            "email": {
+                "label": "Email",
+                "info": "Este é o email associado à sua conta."
+            },
+            "username": {
+                "label": "Nome de usuário"
+            },
+            "fullName": {
+                "label": "Nome completo"
+            },
+            "phone": {
+                "label": "Telefone"
+            },
+            "buttons": {
+                "cancel": "Cancelar",
+                "save": "Salvar alterações",
+                "saving": "Salvando..."
+            }
+        },
+        "errors": {
+            "load": "Falha ao carregar o perfil.",
+            "usernameTaken": "O nome de usuário \"{{username}}\" já está em uso.",
+            "update": "Não foi possível atualizar seu perfil. Tente novamente."
+        },
+        "messages": {
+            "avatarSuccess": "Foto do perfil atualizada!",
+            "profileSuccess": "Perfil atualizado com sucesso!"
+        },
+        "uploader": {
+            "alt": "Avatar do usuário",
+            "buttons": {
+                "changePhoto": "Trocar foto",
+                "uploading": "Enviando..."
+            },
+            "errors": {
+                "notImage": "Selecione um arquivo de imagem.",
+                "tooLarge": "Arquivo muito grande (máx. {{maxMB}}MB).",
+                "noUrl": "O upload não retornou uma URL.",
+                "uploadFailed": "Falha ao enviar a imagem. Tente novamente."
+            }
+        }
+    },
+    "appointments": {
+        "title": "Consultas",
+        "loading": "Carregando suas consultas...",
+        "empty": "Você ainda não tem consultas.",
+        "error": "Falha ao carregar as consultas. Tente novamente.",
+        "card": {
+            "dateTbd": "Data a definir",
+            "appointmentFallback": "Consulta",
+            "ariaLabel": "{{serviceType}} em {{date}}",
+            "duration_one": "{{count}} minuto",
+            "duration_other": "{{count}} minutos"
+        }
+    },
+    "subscriptions": {
+        "title": "Assinaturas",
+        "loading": "Carregando suas assinaturas...",
+        "empty": "Você ainda não tem assinaturas.",
+        "error": "Falha ao carregar as assinaturas. Tente novamente.",
+        "card": {
+            "nextBilling": "Próxima cobrança",
+            "started": "Início",
+            "planFallback": "Assinatura",
+            "statusUnknown": "desconhecido"
+        },
+        "box": {
+            "title": "Assinaturas",
+            "fallbackPlan": "Assinatura",
+            "empty": "Nenhuma assinatura ativa",
+            "more_one": "+{{count}} assinatura a mais",
+            "more_other": "+{{count}} assinaturas a mais",
+            "status": {
+                "active": "Ativa",
+                "canceled": "Cancelada",
+                "past_due": "Em atraso",
+                "trialing": "Em avaliação",
+                "incomplete": "Incompleta",
+                "paused": "Pausada"
+            }
+        }
+    },
+    "pitchDeckRequests": {
+        "title": "Solicitações de Pitch Deck",
+        "loading": "Carregando suas solicitações de pitch deck...",
+        "empty": "Você ainda não enviou nenhuma solicitação de pitch deck.",
+        "error": "Falha ao carregar suas solicitações de pitch deck.",
+        "unknownCompany": "—"
+    },
+    "pitchDeckRequest": {
+        "untitled": "Sem título",
+        "submittedOn": "Enviado em",
+        "download": "Baixar",
+        "status": {
+            "submitted": "Enviado",
+            "in_review": "Em análise",
+            "feedback_sent": "Feedback enviado",
+            "archived": "Arquivado",
+            "unknown": "Desconhecido"
+        }
+    },
+    "chatbotHistory": {
+        "title": "Histórico do Chatbot",
+        "loading": "Carregando suas conversas...",
+        "empty": "Você ainda não tem conversas.",
+        "error": "Falha ao carregar as conversas. Tente novamente.",
+        "card": {
+            "conversationFrom": "Conversa de {{date}}"
+        },
+        "box": {
+            "title": "Histórico do Chatbot",
+            "itemTooltip": "Prévia da conversa",
+            "untitled": "Conversa",
+            "message_one": "{{count}} mensagem",
+            "message_other": "{{count}} mensagens",
+            "empty": "Nenhuma conversa ainda",
+            "moreConversations": "+{{count}} conversas a mais"
+        }
+    },
+    "finances": {
+        "box": {
+            "title": "Finanças",
+            "consultationsLifetime": "Consultas (Total)",
+            "coachingMonthly": "Mentoria (Mensal)",
+            "pitchDecksFree": "Pitch Decks (Grátis)"
+        }
+    },
+    "auth": {
+        "login": {
+            "pageTitle": "Entre na sua conta",
+            "errors": {
+                "unexpected": "Ocorreu um erro inesperado.",
+                "googleFailed": "Falha no login com o Google"
+            }
+        },
+        "signup": {
+            "pageTitle": "Crie uma conta",
+            "errors": {
+                "unexpected": "Ocorreu um erro inesperado.",
+                "googleFailed": "Falha no cadastro com o Google"
+            },
+            "verificationHint": "Enviaremos um link de verificação por email, se necessário."
+        },
+        "forgot": {
+            "pageTitleReset": "Redefina sua senha",
+            "pageTitleSent": "Confira sua caixa de entrada",
+            "sentDescription": "Se existir uma conta para esse endereço, enviamos um email de redefinição de senha. Verifique sua caixa de entrada (e spam).",
+            "openGmail": "Abrir Gmail",
+            "backToLogin": "Voltar ao login",
+            "securityNote": "Por segurança, não confirmamos se um email está cadastrado. Você só receberá mensagem se houver conta para esse endereço.",
+            "errors": {
+                "unexpected": "Ocorreu um erro inesperado."
+            }
+        }
+    },
+    "navigation": {
+        "primary": "Navegação principal",
+        "home": "Início",
+        "calendar": "Calendário",
+        "chat": "Chat",
+        "settings": "Configurações",
+        "profile": "Perfil",
+        "profileAlt": "Seu perfil"
+    },
+    "interactive": {
+        "sections": {
+            "socialMedia": "Redes Sociais",
+            "faq": "FAQ",
+            "bugReport": "Relatório de Bug"
+        }
+    },
+    "common": {
+        "notAvailable": "N/D",
+        "dateShort": "{{val, datetime}}",
+        "untitled": "Sem título",
+        "open": "Abrir",
+        "viewDetails": "Ver detalhes",
+        "dateTimeFull": "{{val, datetime}}",
+        "enable": "Ativar",
+        "disable": "Desativar",
+        "view": "Ver",
+        "comingSoon": "Em breve",
+        "saved": "Salvo"
+    }
+}
