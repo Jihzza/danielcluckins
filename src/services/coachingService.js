@@ -100,13 +100,9 @@ class CoachingService {
       // Always try to create a checkout link first
       const priceEUR = planPrices[subscriptionData.plan];
       
-      console.log('🔍 Coaching Service: Attempting to create subscription checkout link...');
-      console.log('🔍 Coaching Service: Subscription data:', subscriptionData);
-      console.log('🔍 Coaching Service: Price:', priceEUR);
       
       try {
         const checkoutUrl = await this.createSubscriptionCheckoutLink(subscriptionData, priceEUR);
-        console.log('🔍 Coaching Service: Checkout URL created successfully:', checkoutUrl);
         
         return {
           success: true,
@@ -133,7 +129,6 @@ class CoachingService {
             stripe_subscription_id: subscriptionData.stripeSubscriptionId || null
           };
 
-          console.log('🔍 Coaching Service: Inserting subscription data:', insertData);
 
           const { data, error } = await supabase
             .from('subscriptions')
@@ -227,7 +222,6 @@ class CoachingService {
         throw new Error('Did not receive a checkout URL.');
       }
       
-      console.log('🔍 Coaching Service: Created real Stripe subscription checkout URL:', checkoutUrl);
       return checkoutUrl;
     } catch (error) {
       console.error('Coaching Service: Error creating subscription checkout link:', error);
@@ -263,7 +257,6 @@ class CoachingService {
     
     // If it's clearly an informational question, don't trigger subscription form
     if (informationalPatterns.some(pattern => pattern.test(message))) {
-      console.log('🔍 Coaching Service: Informational coaching question detected, skipping subscription detection');
       return false;
     }
     
@@ -287,7 +280,6 @@ class CoachingService {
     ];
     
     const hasPattern = subscriptionPatterns.some(pattern => pattern.test(message));
-    console.log('🔍 Coaching Service: Subscription patterns found:', hasPattern);
     
     return hasPattern;
   }
@@ -296,14 +288,11 @@ class CoachingService {
    * Parse subscription request from natural language
    */
   parseSubscriptionRequest(message) {
-    console.log('🔍 Coaching Service: Parsing subscription request:', message);
     
     const planMatch = message.match(/\b(basic|standard|premium)\b/i);
     const plan = planMatch ? planMatch[1].toLowerCase() : null;
     
     const contactInfo = this.extractContactInfo(message);
-    console.log('🔍 Coaching Service: Extracted plan:', plan);
-    console.log('🔍 Coaching Service: Extracted contact info:', contactInfo);
 
     return {
       plan,

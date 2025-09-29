@@ -10,7 +10,6 @@ class OpenAIService {
       if (apiKey) {
         this.client = new OpenAI({ apiKey, dangerouslyAllowBrowser: true });
       } else {
-        console.warn('🤖 Development mode: No VITE_OPENAI_API_KEY found, using mock responses');
         this.client = null;
       }
     } else {

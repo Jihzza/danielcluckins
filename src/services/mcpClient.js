@@ -22,7 +22,6 @@ class MCPClient {
       
       // For development, you might want to run the MCP server separately
       // and connect to it via HTTP/WebSocket
-      console.log('Starting MCP server connection...');
       
       // This is a placeholder - in production, you'd implement the actual
       // MCP protocol communication here
@@ -206,7 +205,6 @@ class MCPClient {
 
       // Call the Netlify function for MCP pitch requests
       try {
-        console.log('🔍 MCP Client: Trying Netlify function for pitch deck request:', pitchData);
         
         const response = await fetch('/.netlify/functions/mcp-appointments', {
           method: 'POST',
@@ -226,10 +224,8 @@ class MCPClient {
         }
 
         const result = await response.json();
-        console.log('🔍 MCP Client: Netlify function success:', result);
         return result;
       } catch (fetchError) {
-        console.log('🔍 MCP Client: Netlify function failed, using direct Supabase fallback:', fetchError.message);
         // Fallback: Direct Supabase call
         return await this.requestPitchDeckDirect(pitchData);
       }
@@ -295,7 +291,6 @@ class MCPClient {
         throw new Error('Did not receive a checkout URL.');
       }
       
-      console.log('🔍 MCP Client: Created real Stripe subscription checkout URL:', checkoutUrl);
       return checkoutUrl;
     } catch (error) {
       console.error('MCP Client: Error creating subscription checkout link:', error);
@@ -381,7 +376,6 @@ class MCPClient {
         throw new Error('Did not receive a checkout URL.');
       }
       
-      console.log('🔍 MCP Client: Created real Stripe checkout URL:', checkoutUrl);
       return checkoutUrl;
     } catch (error) {
       console.error('MCP Client: Error creating checkout link:', error);
@@ -418,7 +412,6 @@ class MCPClient {
       if (error) {
         // For now, simulate successful booking without database insert
         // This allows the system to work while we fix RLS policies
-        console.log('🔍 MCP Client: Simulating appointment booking (RLS bypass)');
         
         const contactLine = 
           appointmentData.contactName || appointmentData.contactEmail || appointmentData.contactPhone
@@ -485,13 +478,9 @@ class MCPClient {
       // Always try to create a checkout link first
       const priceEUR = planPrices[subscriptionData.plan];
       
-      console.log('🔍 MCP Client: Attempting to create subscription checkout link...');
-      console.log('🔍 MCP Client: Subscription data:', subscriptionData);
-      console.log('🔍 MCP Client: Price:', priceEUR);
       
       try {
         const checkoutUrl = await this.createSubscriptionCheckoutLink(subscriptionData, priceEUR);
-        console.log('🔍 MCP Client: Checkout URL created successfully:', checkoutUrl);
         
         return {
           success: true,
@@ -518,7 +507,6 @@ class MCPClient {
             stripe_subscription_id: subscriptionData.stripeSubscriptionId || null
           };
 
-          console.log('🔍 MCP Client: Inserting subscription data:', insertData);
 
           const { data, error } = await supabase
             .from('subscriptions')
@@ -555,7 +543,6 @@ class MCPClient {
    */
   async requestPitchDeckDirect(pitchData) {
     try {
-      console.log('🔍 MCP Client: Starting direct pitch deck request with data:', pitchData);
       
       // Import the existing Supabase client
       const { supabase } = await import('../lib/supabaseClient.js');
@@ -571,7 +558,6 @@ class MCPClient {
         status: 'submitted'
       };
 
-      console.log('🔍 MCP Client: Inserting pitch request data to database:', insertData);
 
       // Try insertion with service role bypass for RLS
       let insertResult;
@@ -587,11 +573,9 @@ class MCPClient {
           
           // If RLS error, try with service role or different approach
           if (error.code === '42501' || error.code === 'PGRST116') {
-            console.log('🔍 MCP Client: RLS error detected, trying alternative approach...');
             
             // Try again without user_id to bypass RLS policy
             const alternativeData = { ...insertData, user_id: null };
-            console.log('🔍 MCP Client: Trying without user_id:', alternativeData);
             
             const { data: data2, error: error2 } = await supabase
               .from('pitch_requests')
@@ -630,7 +614,6 @@ class MCPClient {
         throw new Error(`Supabase insert failed: ${error.message} (Code: ${error.code})`);
       }
 
-      console.log('🔍 MCP Client: Pitch deck request successfully inserted:', data);
 
       return {
         success: true,
@@ -826,7 +809,6 @@ class MCPClient {
     // Exclude if it contains subscription-related terms
     const subscriptionTerms = ['coaching', 'subscription', 'subscribe', 'premium', 'basic', 'standard'];
     if (subscriptionTerms.some(term => lowerMessage.includes(term))) {
-      console.log('🔍 MCP Client: Subscription terms detected, skipping appointment detection');
       return false;
     }
     
@@ -850,7 +832,6 @@ class MCPClient {
     
     // If it's clearly an informational question, don't trigger appointment form
     if (informationalPatterns.some(pattern => pattern.test(message))) {
-      console.log('🔍 MCP Client: Informational question detected, skipping appointment detection');
       return false;
     }
     
@@ -875,7 +856,6 @@ class MCPClient {
     ];
     
     const hasBookingPattern = bookingPatterns.some(pattern => pattern.test(message));
-    console.log('🔍 MCP Client: Booking patterns found:', hasBookingPattern);
     
     return hasBookingPattern;
   }
@@ -908,7 +888,6 @@ class MCPClient {
     
     // If it's clearly an informational question, don't trigger subscription form
     if (informationalPatterns.some(pattern => pattern.test(message))) {
-      console.log('🔍 MCP Client: Informational coaching question detected, skipping subscription detection');
       return false;
     }
     
@@ -932,7 +911,6 @@ class MCPClient {
     ];
     
     const hasPattern = subscriptionPatterns.some(pattern => pattern.test(message));
-    console.log('🔍 MCP Client: Subscription patterns found:', hasPattern);
     
     return hasPattern;
   }
@@ -959,7 +937,6 @@ class MCPClient {
     
     // If it's clearly an informational question, don't trigger pitch form
     if (informationalPatterns.some(pattern => pattern.test(message))) {
-      console.log('🔍 MCP Client: Informational project question detected, skipping pitch deck detection');
       return false;
     }
     
@@ -983,7 +960,6 @@ class MCPClient {
     ];
     
     const hasPattern = pitchPatterns.some(pattern => pattern.test(message));
-    console.log('🔍 MCP Client: Pitch deck patterns found:', hasPattern);
     
     return hasPattern;
   }
@@ -992,14 +968,11 @@ class MCPClient {
    * Parse subscription request from natural language
    */
   parseSubscriptionRequest(message) {
-    console.log('🔍 MCP Client: Parsing subscription request:', message);
     
     const planMatch = message.match(/\b(basic|standard|premium)\b/i);
     const plan = planMatch ? planMatch[1].toLowerCase() : null;
     
     const contactInfo = this.extractContactInfo(message);
-    console.log('🔍 MCP Client: Extracted plan:', plan);
-    console.log('🔍 MCP Client: Extracted contact info:', contactInfo);
 
     return {
       plan,
@@ -1014,7 +987,6 @@ class MCPClient {
    * Parse pitch deck request from natural language
    */
   parsePitchDeckRequest(message) {
-    console.log('🔍 MCP Client: Parsing pitch deck request:', message);
     
     const projectMatch = message.match(/\b(galowclub|perspectiv)\b/i);
     const project = projectMatch ? projectMatch[1].charAt(0).toUpperCase() + projectMatch[1].slice(1) : null;
@@ -1022,9 +994,6 @@ class MCPClient {
     const contactInfo = this.extractContactInfo(message);
     const role = this.extractRole(message);
     
-    console.log('🔍 MCP Client: Extracted project:', project);
-    console.log('🔍 MCP Client: Extracted contact info:', contactInfo);
-    console.log('🔍 MCP Client: Extracted role:', role);
 
     return {
       project,

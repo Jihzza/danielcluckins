@@ -111,9 +111,6 @@ export const submitBugReport = async (reportData, userId = null) => {
 
   // 2) Validate files
   const files = toFileArray(rawAttachments);
-  console.log('[bugReport] received files:', files?.map(f => ({
-    name: f.name, size: f.size, type: f.type
-  })));
 
   const validFiles = files.filter(f =>
     f && f.size <= MAX_BYTES && allowByMimeOrExt(f)

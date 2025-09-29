@@ -129,7 +129,6 @@ export default function ChatbotPage() {
       const randomString = Math.random().toString(36).substring(2, 15);
       const messageKey = `${role}-${sid}-${timestamp}-${randomString}`;
 
-      console.debug('[saveChatRow]', { sid, uid, role, len: content?.length, messageKey });
       const { error } = await supabase
         .from('chatbot_conversations')
         .insert([{ session_id: sid, user_id: uid, role, content, message_key: messageKey }]);

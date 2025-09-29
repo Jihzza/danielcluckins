@@ -115,7 +115,6 @@ class ConsultationService {
       if (error) {
         // For now, simulate successful booking without database insert
         // This allows the system to work while we fix RLS policies
-        console.log('🔍 Consultation Service: Simulating appointment booking (RLS bypass)');
         
         const contactLine = 
           appointmentData.contactName || appointmentData.contactEmail || appointmentData.contactPhone
@@ -249,7 +248,6 @@ class ConsultationService {
         throw new Error('Did not receive a checkout URL.');
       }
       
-      console.log('🔍 Consultation Service: Created real Stripe checkout URL:', checkoutUrl);
       return checkoutUrl;
     } catch (error) {
       console.error('Consultation Service: Error creating checkout link:', error);
@@ -440,7 +438,6 @@ class ConsultationService {
     // Exclude if it contains subscription-related terms
     const subscriptionTerms = ['coaching', 'subscription', 'subscribe', 'premium', 'basic', 'standard'];
     if (subscriptionTerms.some(term => lowerMessage.includes(term))) {
-      console.log('🔍 Consultation Service: Subscription terms detected, skipping appointment detection');
       return false;
     }
     
@@ -464,7 +461,6 @@ class ConsultationService {
     
     // If it's clearly an informational question, don't trigger appointment form
     if (informationalPatterns.some(pattern => pattern.test(message))) {
-      console.log('🔍 Consultation Service: Informational question detected, skipping appointment detection');
       return false;
     }
     
@@ -489,7 +485,6 @@ class ConsultationService {
     ];
     
     const hasBookingPattern = bookingPatterns.some(pattern => pattern.test(message));
-    console.log('🔍 Consultation Service: Booking patterns found:', hasBookingPattern);
     
     return hasBookingPattern;
   }

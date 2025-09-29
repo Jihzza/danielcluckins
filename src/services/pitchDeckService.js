@@ -7,7 +7,6 @@ class PitchDeckService {
    */
   async requestPitchDeck(pitchData) {
     try {
-      console.log('🔍 PitchDeck Service: Starting pitch deck request with data:', pitchData);
       
       return await this.requestPitchDeckDirect(pitchData);
     } catch (error) {
@@ -38,7 +37,6 @@ class PitchDeckService {
         status: 'submitted'
       };
 
-      console.log('🔍 PitchDeck Service: Inserting pitch request data to database:', insertData);
 
       // Try insertion
       let { data, error } = await supabase
@@ -52,10 +50,7 @@ class PitchDeckService {
         
         // If RLS error, try without user_id
         if (error.code === '42501' || error.code === 'PGRST116') {
-          console.log('🔍 PitchDeck Service: RLS error detected, trying without user_id...');
-          
           const alternativeData = { ...insertData, user_id: null };
-          console.log('🔍 PitchDeck Service: Alternative data:', alternativeData);
           
           const alternativeResult = await supabase
             .from('pitch_requests')
@@ -75,7 +70,6 @@ class PitchDeckService {
         }
       }
 
-      console.log('🔍 PitchDeck Service: Pitch deck request successfully inserted:', data);
 
       return {
         success: true,
@@ -113,7 +107,6 @@ class PitchDeckService {
     
     // If it's clearly an informational question, don't trigger pitch form
     if (informationalPatterns.some(pattern => pattern.test(message))) {
-      console.log('🔍 PitchDeck Service: Informational project question detected, skipping pitch deck detection');
       return false;
     }
     
@@ -137,7 +130,6 @@ class PitchDeckService {
     ];
     
     const hasPattern = pitchPatterns.some(pattern => pattern.test(message));
-    console.log('🔍 PitchDeck Service: Pitch deck patterns found:', hasPattern);
     
     return hasPattern;
   }
@@ -146,7 +138,6 @@ class PitchDeckService {
    * Parse pitch deck request from natural language
    */
   parsePitchDeckRequest(message) {
-    console.log('🔍 PitchDeck Service: Parsing pitch deck request:', message);
     
     const projectMatch = message.match(/\b(galowclub|perspectiv)\b/i);
     const project = projectMatch ? projectMatch[1].charAt(0).toUpperCase() + projectMatch[1].slice(1) : null;
@@ -154,9 +145,6 @@ class PitchDeckService {
     const contactInfo = this.extractContactInfo(message);
     const role = this.extractRole(message);
     
-    console.log('🔍 PitchDeck Service: Extracted project:', project);
-    console.log('🔍 PitchDeck Service: Extracted contact info:', contactInfo);
-    console.log('🔍 PitchDeck Service: Extracted role:', role);
 
     return {
       project,

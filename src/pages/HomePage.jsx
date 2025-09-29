@@ -166,27 +166,11 @@ export default function HomePage() {
             const isVisible = rect.bottom > 0 && rect.top < windowHeight && 
                              rect.right > 0 && rect.left < windowWidth;
             
-            // Debug logging
-            if (process.env.NODE_ENV === 'production') {
-                console.log('Scroll detection - rect:', {
-                    top: rect.top,
-                    bottom: rect.bottom,
-                    left: rect.left,
-                    right: rect.right,
-                    windowHeight,
-                    windowWidth,
-                    isVisible
-                });
-            }
             
             return isVisible;
         };
 
         const dispatchVisibilityEvent = (isVisible) => {
-            // Debug log for production troubleshooting
-            if (process.env.NODE_ENV === 'production') {
-                console.log('Chat section visibility changed:', isVisible);
-            }
             window.dispatchEvent(new CustomEvent('chatSectionVisible', { detail: isVisible }));
         };
 
@@ -205,15 +189,6 @@ export default function HomePage() {
             observer = new IntersectionObserver(
                 ([entry]) => {
                     const isVisible = !!entry?.isIntersecting;
-                    // Debug logging for intersection observer
-                    if (process.env.NODE_ENV === 'production') {
-                        console.log('Intersection observer - entry:', {
-                            isIntersecting: entry?.isIntersecting,
-                            intersectionRatio: entry?.intersectionRatio,
-                            boundingClientRect: entry?.boundingClientRect,
-                            rootBounds: entry?.rootBounds
-                        });
-                    }
                     dispatchVisibilityEvent(isVisible);
                 },
                 { 
