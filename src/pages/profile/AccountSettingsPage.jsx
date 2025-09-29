@@ -650,8 +650,7 @@ function LegalSection() {
           {[
             { label: t("accountSettings.page.legal.privacyPolicy"), to: "/privacy-policy" },
             { label: t("accountSettings.page.legal.termsOfService"), to: "/terms-of-service" },
-            { label: t("accountSettings.page.legal.refundPolicy"), to: "/refund-policy" },
-            { label: t("accountSettings.page.legal.dpa"), to: "/dpa" },
+            { label: t("accountSettings.page.legal.cookiePolicy"), to: "/cookie-policy" },
           ].map((l) => (
             <li key={l.to} className="flex items-center justify-between bg-black/10 px-4 py-3 md:py-4 lg:py-2 text-[#fff]">
               <span className="text-sm md:text-base lg:text-xs">{l.label}</span>

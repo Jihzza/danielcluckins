@@ -1,4 +1,4 @@
-// src/pages/TermsOfServicePage.jsx
+// src/pages/CookiePolicyPage.jsx
 
 import React from 'react';
 import { useTranslation } from 'react-i18next';
@@ -34,10 +34,10 @@ const renderContent = (item, index) => {
   }
 };
 
-export default function TermsOfServicePage() {
+export default function CookiePolicyPage() {
   const { t } = useTranslation();
 
-  const pageContent = t('termsOfService', { returnObjects: true });
+  const pageContent = t('cookiePolicy', { returnObjects: true });
 
   return (
     <div className="relative min-h-[85vh] w-full overflow-hidden bg-[#002147]">

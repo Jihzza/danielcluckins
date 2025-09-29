@@ -146,20 +146,113 @@ export default function HomePage() {
 
     // Observe Chat section visibility and broadcast event for navbar glow
     useEffect(() => {
-        const section = document.getElementById('chat-section');
-        if (!section) return;
+        let observer = null;
+        let retryTimeout = null;
+        let retryCount = 0;
+        const maxRetries = 10;
+        const retryDelay = 100;
+        let scrollHandler = null;
 
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                const isVisible = !!entry?.isIntersecting;
-                window.dispatchEvent(new CustomEvent('chatSectionVisible', { detail: isVisible }));
-            },
-            { threshold: 0.5 }
-        );
+        const checkVisibility = () => {
+            const section = document.getElementById('chat-section');
+            if (!section) return false;
 
-        observer.observe(section);
-        return () => observer.disconnect();
-    }, []);
+            const rect = section.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+            const windowWidth = window.innerWidth;
+            
+            // More sensitive detection: section is visible if any part is in viewport
+            // and it's not completely above or below the visible area
+            const isVisible = rect.bottom > 0 && rect.top < windowHeight && 
+                             rect.right > 0 && rect.left < windowWidth;
+            
+            // Debug logging
+            if (process.env.NODE_ENV === 'production') {
+                console.log('Scroll detection - rect:', {
+                    top: rect.top,
+                    bottom: rect.bottom,
+                    left: rect.left,
+                    right: rect.right,
+                    windowHeight,
+                    windowWidth,
+                    isVisible
+                });
+            }
+            
+            return isVisible;
+        };
+
+        const dispatchVisibilityEvent = (isVisible) => {
+            // Debug log for production troubleshooting
+            if (process.env.NODE_ENV === 'production') {
+                console.log('Chat section visibility changed:', isVisible);
+            }
+            window.dispatchEvent(new CustomEvent('chatSectionVisible', { detail: isVisible }));
+        };
+
+        const setupObserver = () => {
+            const section = document.getElementById('chat-section');
+            if (!section) {
+                // Retry if element not found and we haven't exceeded max retries
+                if (retryCount < maxRetries) {
+                    retryCount++;
+                    retryTimeout = setTimeout(setupObserver, retryDelay);
+                }
+                return;
+            }
+
+            // Set up intersection observer with more sensitive threshold
+            observer = new IntersectionObserver(
+                ([entry]) => {
+                    const isVisible = !!entry?.isIntersecting;
+                    // Debug logging for intersection observer
+                    if (process.env.NODE_ENV === 'production') {
+                        console.log('Intersection observer - entry:', {
+                            isIntersecting: entry?.isIntersecting,
+                            intersectionRatio: entry?.intersectionRatio,
+                            boundingClientRect: entry?.boundingClientRect,
+                            rootBounds: entry?.rootBounds
+                        });
+                    }
+                    dispatchVisibilityEvent(isVisible);
+                },
+                { 
+                    threshold: 0.1,  // Much more sensitive - triggers when 10% is visible
+                    rootMargin: '0px 0px -10% 0px'  // Trigger slightly before fully in view
+                }
+            );
+
+            observer.observe(section);
+
+            // Immediately check if section is already visible
+            const initialVisibility = checkVisibility();
+            if (initialVisibility) {
+                dispatchVisibilityEvent(true);
+            }
+
+            // Fallback: also set up scroll listener as backup
+            scrollHandler = () => {
+                const isVisible = checkVisibility();
+                dispatchVisibilityEvent(isVisible);
+            };
+
+            // Add scroll listener to the scroll container
+            const scrollElement = scrollContainer?.current || window;
+            scrollElement.addEventListener('scroll', scrollHandler, { passive: true });
+        };
+
+        // Start the setup process
+        setupObserver();
+
+        return () => {
+            if (observer) observer.disconnect();
+            if (retryTimeout) clearTimeout(retryTimeout);
+            if (scrollHandler) {
+                const scrollElement = scrollContainer?.current || window;
+                scrollElement.removeEventListener('scroll', scrollHandler);
+            }
+        };
+    }, [scrollContainer]);
 
     useEffect(() => {
         let cancelled = false;
