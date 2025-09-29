@@ -161,62 +161,60 @@ export default function ProfilePage() {
         onEdit={() => navigate('/profile/edit')}
       />
 
-      <div className="p-4 space-y-6">
-        {/* Dashboard Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-
-          {/* Consultations Box - Top Right */}
-          <ConsultationsBox
-            consultations={dashboardData.consultations}
-            to="/profile/appointments"
-          />
+      <div className="p-2 md:p-4 space-y-2 md:space-y-3">
+        {/* First row - 3 boxes */}
+        <div className="flex flex-col lg:flex-row gap-2 md:gap-3">
+          <div className="flex-1">
+            <ConsultationsBox
+              consultations={dashboardData.consultations}
+              to="/profile/appointments"
+            />
+          </div>
+          <div className="flex-1">
+            <SubscriptionsBox
+              subscriptions={dashboardData.subscriptions}
+              to="/profile/subscriptions"
+            />
+          </div>
+          <div className="flex-1">
+            <PitchDeckBox
+              requests={dashboardData.pitchDeckRequests}
+              to="/profile/pitch-requests"
+            />
+          </div>
         </div>
 
-        {/* Second Row */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {/* Subscriptions Box */}
-          <SubscriptionsBox
-            subscriptions={dashboardData.subscriptions}
-            to="/profile/subscriptions"
-          />
-
-          {/* Pitch Deck Requests Box */}
-          <PitchDeckBox
-            requests={dashboardData.pitchDeckRequests}
-            to="/profile/pitch-requests"
-          />
-
-          <ChatbotHistoryBox
-            items={dashboardData.chatbotHistory}
-            to="/profile/chatbot-history"
-          />
+        {/* Second row - 3 boxes */}
+        <div className="flex flex-col lg:flex-row gap-2 md:gap-3">
+          <div className="flex-1">
+            <ChatbotHistoryBox
+              items={dashboardData.chatbotHistory}
+              to="/profile/chatbot-history"
+            />
+          </div>
+          <div className="flex-1">
+            <FinancesBox
+              consultationEarnings={dashboardData.finances.consultationEarnings}
+              coachingRevenue={dashboardData.finances.coachingRevenue}
+              pitchDeckEarnings={dashboardData.finances.pitchDeckEarnings}
+              to="/profile/finances"
+            />
+          </div>
+          <div className="flex-1">
+            <AccountSettingsBox
+              user={user}
+              to="/settings"
+            />
+          </div>
         </div>
-
-        {/* Third Row */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {/* Finances Box - Top Left */}
-          <FinancesBox
-            consultationEarnings={dashboardData.finances.consultationEarnings}
-            coachingRevenue={dashboardData.finances.coachingRevenue}
-            pitchDeckEarnings={dashboardData.finances.pitchDeckEarnings}
-            to="/profile/finances"
-          />
-
-          {/* Account Settings Box */}
-          <AccountSettingsBox
-            user={user}
-            to="/settings"
-          />
-        </div>
-
-        {/* Logout Button */}
-        <div className="pt-4">
+      
+        <div className="pt-2">
           <button
             onClick={handleLogout}
-            className="flex items-center justify-center p-3 w-full text-left text-red-400 hover:bg-red-900/20 transition-colors duration-200 rounded-lg border border-red-400/50"
+            className="flex items-center justify-center p-2 w-full text-left text-red-400 hover:bg-red-900/20 transition-colors duration-200 rounded-md border border-red-400/50"
           >
-            <ArrowLeftOnRectangleIcon className="h-6 w-6 mr-3 md:h-8 md:w-8" />
-            <span className="text-lg font-base md:text-xl">
+            <ArrowLeftOnRectangleIcon className="h-4 w-4 md:h-6 md:w-6 mr-2" />
+            <span className="text-sm md:text-base font-medium">
               {t('profile.logout')}
             </span>
           </button>
