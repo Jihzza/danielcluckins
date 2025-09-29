@@ -886,8 +886,7 @@
         "desc": "Our policies and agreements.",
         "privacyPolicy": "Privacy Policy",
         "termsOfService": "Terms of Service",
-        "refundPolicy": "Refund Policy",
-        "dpa": "Data Processing Addendum"
+        "cookiePolicy": "Cookie Policy"
       },
       "danger": {
         "title": "Danger zone",
@@ -914,122 +913,401 @@
   },
   "privacyPolicy": {
     "title": "Privacy Policy",
-    "lead": "Last updated: July 12, 2025",
+    "lead": "Last Updated: September 29, 2025 | Effective Date: September 29, 2025",
     "content": [
       {
+        "type": "h4",
+        "text": "1. Who We Are"
+      },
+      {
         "type": "p",
-        "text": "At DaGalow, we respect your privacy and are committed to protecting your personal data. This Privacy Policy explains how we collect, use, and safeguard your information when you use our website and services."
+        "text": "This website and services are operated by Daniel Cluckins (\"I,\" \"me,\" \"my\"). I am the data controller for personal data collected via www.danielcluckins.com."
+      },
+      {
+        "type": "p",
+        "text": "Contact: danielcluckins@gmail.com"
+      },
+      {
+        "type": "p",
+        "text": "When the business is registered, this section will be updated with the company's legal name and registered address."
       },
       {
         "type": "h4",
-        "text": "1. Information We Collect"
+        "text": "2. What Information I Collect"
       },
       {
         "type": "p",
-        "text": "We collect information you provide directly to us, including:"
+        "text": "You provide: name, email, phone, account details, payment information (via Stripe), content you share in coaching/consultations."
+      },
+      {
+        "type": "p",
+        "text": "Automatically collected: IP address, device/browser type, session data, usage patterns, cookies (see Cookie Policy)."
+      },
+      {
+        "type": "p",
+        "text": "From third parties: Stripe (payment processor), hosting/email providers, and any analytics/communication tools used."
+      },
+      {
+        "type": "p",
+        "text": "👉 I never see or store your full credit card details. Payments are securely processed by Stripe."
+      },
+      {
+        "type": "h4",
+        "text": "3. How I Use Your Data"
       },
       {
         "type": "ul",
         "items": [
-          "Personal information (name, email address, phone number)",
-          "Profile information",
-          "Payment and transaction information",
-          "Communications you send to us",
-          "Usage information and interaction with our services"
+          "Provide and improve services (consultations, coaching, subscriptions).",
+          "Process payments via Stripe.",
+          "Communicate with you about services, updates, offers.",
+          "Handle support and bug reports.",
+          "Meet legal obligations (tax, accounting, fraud prevention)."
         ]
       },
       {
-        "type": "h4",
-        "text": "2. How We Use Your Information"
+        "type": "p",
+        "text": "I will not sell your personal data."
       },
       {
-        "type": "p",
-        "text": "We use your information to:"
+        "type": "h4",
+        "text": "4. Legal Bases (GDPR)"
       },
       {
         "type": "ul",
         "items": [
-          "Provide, maintain, and improve our services",
-          "Process transactions and send related information",
-          "Send you technical notices, updates, and support messages",
-          "Respond to your comments and questions",
-          "Personalize your experience",
-          "Monitor and analyze trends and usage"
+          "Contract: To deliver services you request.",
+          "Legal obligation: Tax, accounting, compliance.",
+          "Legitimate interests: Improve services, prevent fraud, keep systems secure.",
+          "Consent: For marketing communications and cookies (where required)."
         ]
       },
       {
         "type": "h4",
-        "text": "3. Sharing of Information"
+        "text": "5. Sharing Data"
       },
       {
         "type": "p",
-        "text": "We may share your information with service providers who perform services on our behalf, payment processors, professional advisors, and when required by law or to protect rights."
+        "text": "I share data only with:"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Stripe (payments & fraud prevention).",
+          "Service providers (hosting, email, support).",
+          "Legal authorities (if required by law).",
+          "Successors in case of business transfer."
+        ]
       },
       {
         "type": "h4",
-        "text": "4. Your Rights"
+        "text": "6. International Transfers"
       },
       {
         "type": "p",
-        "text": "Depending on your location, you may have rights to access, correct, delete, or restrict the processing of your personal data. You may also have the right to withdraw consent."
+        "text": "Stripe and other providers may transfer data outside the EU/EEA. Safeguards include Standard Contractual Clauses (SCCs) or participation in the EU-US Data Privacy Framework."
       },
       {
         "type": "h4",
-        "text": "5. Contact Us"
+        "text": "7. Retention"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Account data: while your account is active + up to 24 months.",
+          "Payment records: at least 7 years (to comply with accounting/tax laws).",
+          "Support data: up to 24 months.",
+          "Marketing: until you unsubscribe."
+        ]
       },
       {
         "type": "p",
-        "text": "If you have any questions about this Privacy Policy, please contact us at privacy@dagalow.com"
+        "text": "(These periods may be adjusted when the company is registered and accounting rules are confirmed.)"
+      },
+      {
+        "type": "h4",
+        "text": "8. Your Rights"
+      },
+      {
+        "type": "p",
+        "text": "You have the right to access, correct, delete, restrict, or object to use of your data, and to withdraw consent at any time."
+      },
+      {
+        "type": "p",
+        "text": "To exercise your rights, email me at danielcluckins@gmail.com."
+      },
+      {
+        "type": "p",
+        "text": "You may also lodge a complaint with the Agencia Española de Protección de Datos (AEPD) or your local authority."
+      },
+      {
+        "type": "h4",
+        "text": "9. Security"
+      },
+      {
+        "type": "p",
+        "text": "I use encrypted connections (SSL/TLS), secure third-party payment processing (Stripe), and access controls to protect your data."
+      },
+      {
+        "type": "h4",
+        "text": "10. Children"
+      },
+      {
+        "type": "p",
+        "text": "Services are not directed to children under 16. If you believe a child has provided personal data, please contact me for deletion."
+      },
+      {
+        "type": "h4",
+        "text": "11. Changes"
+      },
+      {
+        "type": "p",
+        "text": "I may update this Privacy Policy. Updates will be posted here with the \"Last Updated\" date."
       }
     ]
   },
   "termsOfService": {
     "title": "Terms of Service",
-    "lead": "Last updated: July 12, 2025",
+    "lead": "Last Updated: September 29, 2025 | Effective Date: September 29, 2025",
     "content": [
       {
+        "type": "h4",
+        "text": "1. Introduction"
+      },
+      {
         "type": "p",
-        "text": "Please read these Terms of Service (\"Terms\") carefully before using the DaGalow website and services operated by DaGalow (\"we,\" \"us,\" or \"our\")."
+        "text": "Welcome to Daniel Cluckins Coaching (\"Company,\" \"we,\" \"our,\" \"us\"). These Terms of Service (\"Terms\") govern your access to and use of our website www.danielcluckins.com, consultations, coaching subscriptions, and related services (\"Services\"). By using our Services, you agree to these Terms. If you do not agree, you may not use our Services."
       },
       {
         "type": "h4",
-        "text": "1. Acceptance of Terms"
+        "text": "2. Eligibility"
       },
       {
         "type": "p",
-        "text": "By accessing or using our service, you agree to be bound by these Terms. If you disagree with any part of the terms, you may not access the service."
+        "text": "You must be at least 18 years old to use our Services."
+      },
+      {
+        "type": "p",
+        "text": "You may not use our Services for any unlawful purpose or in violation of these Terms."
       },
       {
         "type": "h4",
-        "text": "2. User Accounts"
+        "text": "3. Accounts"
       },
       {
         "type": "p",
-        "text": "You are responsible for safeguarding your account password and for all activities that occur under your account. You must provide accurate and complete information and notify us immediately of any unauthorized use."
+        "text": "To access certain features, you may create an account."
+      },
+      {
+        "type": "p",
+        "text": "You are responsible for maintaining the confidentiality of your login credentials."
+      },
+      {
+        "type": "p",
+        "text": "You agree to provide accurate and up-to-date information."
+      },
+      {
+        "type": "p",
+        "text": "We may suspend or terminate accounts that violate these Terms."
       },
       {
         "type": "h4",
-        "text": "3. Payments and Subscriptions"
+        "text": "4. Services & Pricing"
       },
       {
         "type": "p",
-        "text": "For paid services, you agree to pay all fees based on the billing terms in effect. Subscriptions will automatically renew until cancelled at least 24 hours before the end of the current billing period."
+        "text": "We offer consultations and coaching services as described on our website."
+      },
+      {
+        "type": "p",
+        "text": "Consultations are charged at €90/hour (minimum 45 minutes)."
+      },
+      {
+        "type": "p",
+        "text": "Coaching subscriptions have three tiers: €40/month, €90/month, and €230/month, with benefits as described on our site."
+      },
+      {
+        "type": "p",
+        "text": "Pricing may change, and we will notify you of changes in advance."
       },
       {
         "type": "h4",
-        "text": "4. Limitation of Liability"
+        "text": "5. Payments & Refunds"
       },
       {
         "type": "p",
-        "text": "In no event shall DaGalow be liable for any indirect, incidental, special, consequential or punitive damages, including loss of profits, data, or goodwill."
+        "text": "Payments are processed securely via third-party providers (e.g., Stripe, PayPal)."
+      },
+      {
+        "type": "p",
+        "text": "All fees must be paid in advance."
+      },
+      {
+        "type": "p",
+        "text": "Subscriptions automatically renew monthly unless canceled."
+      },
+      {
+        "type": "p",
+        "text": "Refunds are not provided for completed services. For subscriptions, refunds are handled at our discretion, unless otherwise required by law."
       },
       {
         "type": "h4",
-        "text": "5. Contact Us"
+        "text": "6. User Responsibilities"
       },
       {
         "type": "p",
-        "text": "If you have any questions about these Terms, please contact us at terms@dagalow.com"
+        "text": "When using our Services, you agree not to:"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Share your account with others.",
+          "Harass, abuse, or harm others.",
+          "Misuse our content (e.g., redistributing coaching videos without permission).",
+          "Attempt to disrupt or hack our website or Services."
+        ]
+      },
+      {
+        "type": "h4",
+        "text": "7. Intellectual Property"
+      },
+      {
+        "type": "p",
+        "text": "All materials provided through our Services (videos, recordings, documents, website content) are owned by us or our licensors."
+      },
+      {
+        "type": "p",
+        "text": "You are granted a personal, non-transferable, non-exclusive license to use the materials for personal purposes only."
+      },
+      {
+        "type": "p",
+        "text": "You may not copy, distribute, sell, or exploit our content without prior written consent."
+      },
+      {
+        "type": "h4",
+        "text": "8. Coaching & Consultation Disclaimer"
+      },
+      {
+        "type": "p",
+        "text": "Our coaching and consultations provide guidance and support but are not a substitute for professional medical, legal, financial, or psychological advice."
+      },
+      {
+        "type": "p",
+        "text": "You acknowledge that results depend on your own actions and circumstances. We do not guarantee outcomes."
+      },
+      {
+        "type": "h4",
+        "text": "9. Termination"
+      },
+      {
+        "type": "p",
+        "text": "We may suspend or terminate your account or access to Services if:"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "You fail to pay fees.",
+          "You violate these Terms.",
+          "You engage in abusive or harmful conduct."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "You may cancel your account at any time by contacting us."
+      },
+      {
+        "type": "h4",
+        "text": "10. Limitation of Liability"
+      },
+      {
+        "type": "p",
+        "text": "To the fullest extent permitted by law, we are not liable for any indirect, incidental, or consequential damages, including loss of profits or data."
+      },
+      {
+        "type": "p",
+        "text": "Our total liability for any claim shall not exceed the amount paid for the relevant Service."
+      },
+      {
+        "type": "h4",
+        "text": "11. Governing Law & Jurisdiction"
+      },
+      {
+        "type": "p",
+        "text": "These Terms are governed by the laws of Portugal. Any disputes shall be resolved in the courts of Spain."
+      },
+      {
+        "type": "h4",
+        "text": "12. Changes to Terms"
+      },
+      {
+        "type": "p",
+        "text": "We may update these Terms from time to time. Updates will be posted on our website with the \"Last Updated\" date. Continued use of our Services after changes constitutes acceptance of the new Terms."
+      },
+      {
+        "type": "h4",
+        "text": "13. Contact Us"
+      },
+      {
+        "type": "p",
+        "text": "If you have questions about these Terms, contact us at:"
+      },
+      {
+        "type": "p",
+        "text": "📧 Email: danielcluckins@gmail.com"
+      }
+    ]
+  },
+  "cookiePolicy": {
+    "title": "Cookie Policy",
+    "lead": "Last Updated: September 29, 2025",
+    "content": [
+      {
+        "type": "h4",
+        "text": "1. About Cookies"
+      },
+      {
+        "type": "p",
+        "text": "Cookies are small files stored on your device when visiting a website. They are used to make the site work, keep accounts secure, and (optionally) track analytics or ads."
+      },
+      {
+        "type": "h4",
+        "text": "2. What Cookies I Use"
+      },
+      {
+        "type": "p",
+        "text": "At this stage, the site uses only:"
+      },
+      {
+        "type": "p",
+        "text": "Strictly Necessary Cookies: essential for security and payments, including Stripe cookies (_stripe_mid, _stripe_sid) and session cookies."
+      },
+      {
+        "type": "p",
+        "text": "I do not currently use analytics or marketing cookies. If I add them, this policy will be updated and a cookie banner will be shown."
+      },
+      {
+        "type": "h4",
+        "text": "3. Managing Cookies"
+      },
+      {
+        "type": "p",
+        "text": "You can disable cookies in your browser settings, though some functions (like payments) may not work correctly."
+      },
+      {
+        "type": "h4",
+        "text": "4. Third-Party Cookies"
+      },
+      {
+        "type": "p",
+        "text": "Stripe may place cookies for fraud prevention and secure payment processing. See Stripe's Privacy Policy for details."
+      },
+      {
+        "type": "h4",
+        "text": "5. Changes"
+      },
+      {
+        "type": "p",
+        "text": "I may update this Cookie Policy as services change. Updates will appear here with a new \"Last Updated\" date."
       }
     ]
   },

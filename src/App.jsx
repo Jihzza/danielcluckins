@@ -21,6 +21,7 @@ import CalendarPage from './pages/CalendarPage';
 import NotificationsPage from './pages/NotificationsPage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
 import TermsOfServicePage from './pages/TermsOfServicePage';
+import CookiePolicyPage from './pages/CookiePolicyPage';
 import SuccessPage from './pages/SuccessPage';
 import SchedulingFormPage from './pages/SchedulingFormPage';
 import ChatbotPage from './pages/ChatbotPage';
@@ -42,6 +43,7 @@ function App() {
             <Route path="/reset-password" element={<ResetPasswordPage />} />
             <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
             <Route path="/terms-of-service" element={<TermsOfServicePage />} />
+            <Route path="/cookie-policy" element={<CookiePolicyPage />} />
             <Route path="/select-service" element={<SchedulingFormPage />} />
             <Route path="/schedule" element={<SchedulingFormPage />} />
 

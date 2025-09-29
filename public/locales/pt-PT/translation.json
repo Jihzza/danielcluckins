@@ -870,8 +870,7 @@
                 "desc": "As nossas políticas e acordos.",
                 "privacyPolicy": "Política de Privacidade",
                 "termsOfService": "Termos de Serviço",
-                "refundPolicy": "Política de Reembolso",
-                "dpa": "Aditamento de Processamento de Dados"
+                "cookiePolicy": "Política de Cookies"
             },
             "danger": {
                 "title": "Zona de perigo",
@@ -898,7 +897,7 @@
     },
     "privacyPolicy": {
         "title": "Política de Privacidade",
-        "lead": "Última atualização: 12 de julho de 2025",
+        "lead": "Última atualização: 29 de setembro de 2025 | Data de vigência: 29 de setembro de 2025",
         "content": [
             {
                 "type": "p",
@@ -969,51 +968,246 @@
     },
     "termsOfService": {
         "title": "Termos de Serviço",
-        "lead": "Última atualização: 12 de julho de 2025",
+        "lead": "Última atualização: 29 de setembro de 2025 | Data de vigência: 29 de setembro de 2025",
         "content": [
             {
+                "type": "h4",
+                "text": "1. Introdução"
+            },
+            {
                 "type": "p",
-                "text": "Lê com atenção estes Termos de Serviço (\"Termos\") antes de utilizares o website e os serviços da DaGalow operados pela DaGalow (\"nós\", \"nos\" ou \"nosso\")."
+                "text": "Bem-vindo ao Daniel Cluckins Coaching (\"Empresa,\" \"nós,\" \"nosso,\" \"nos\"). Estes Termos de Serviço (\"Termos\") regem o teu acesso e uso do nosso site www.danielcluckins.com, consultas, subscrições de coaching e serviços relacionados (\"Serviços\"). Ao usares os nossos Serviços, concordas com estes Termos. Se não concordares, não podes usar os nossos Serviços."
             },
             {
                 "type": "h4",
-                "text": "1. Aceitação dos Termos"
+                "text": "2. Elegibilidade"
             },
             {
                 "type": "p",
-                "text": "Ao acederes ou utilizares o nosso serviço, concordas em ficar vinculado a estes Termos. Se não concordares com alguma parte, não podes aceder ao serviço."
+                "text": "Tens de ter pelo menos 18 anos para usar os nossos Serviços."
+            },
+            {
+                "type": "p",
+                "text": "Não podes usar os nossos Serviços para qualquer propósito ilegal ou em violação destes Termos."
             },
             {
                 "type": "h4",
-                "text": "2. Contas de Utilizador"
+                "text": "3. Contas"
             },
             {
                 "type": "p",
-                "text": "És responsável por proteger a palavra-passe da tua conta e por todas as atividades realizadas na tua conta. Deves fornecer informação correta e completa e notificar-nos de imediato sobre qualquer uso não autorizado."
+                "text": "Para acederes a certas funcionalidades, podes criar uma conta."
+            },
+            {
+                "type": "p",
+                "text": "És responsável por manter a confidencialidade das tuas credenciais de login."
+            },
+            {
+                "type": "p",
+                "text": "Concordas em fornecer informação precisa e atualizada."
+            },
+            {
+                "type": "p",
+                "text": "Podemos suspender ou encerrar contas que violem estes Termos."
             },
             {
                 "type": "h4",
-                "text": "3. Pagamentos e Subscrições"
+                "text": "4. Serviços e Preços"
             },
             {
                 "type": "p",
-                "text": "Para serviços pagos, concordas em pagar todas as taxas segundo os termos de faturação em vigor. As subscrições renovam automaticamente até serem canceladas com pelo menos 24 horas de antecedência do fim do período em curso."
+                "text": "Oferecemos consultas e serviços de coaching conforme descrito no nosso site."
+            },
+            {
+                "type": "p",
+                "text": "As consultas são cobradas a €90/hora (mínimo 45 minutos)."
+            },
+            {
+                "type": "p",
+                "text": "As subscrições de coaching têm três níveis: €40/mês, €90/mês e €230/mês, com benefícios conforme descrito no nosso site."
+            },
+            {
+                "type": "p",
+                "text": "Os preços podem mudar, e notificaremos-te sobre as mudanças com antecedência."
             },
             {
                 "type": "h4",
-                "text": "4. Limitação de Responsabilidade"
+                "text": "5. Pagamentos e Reembolsos"
             },
             {
                 "type": "p",
-                "text": "Em caso algum a DaGalow será responsável por danos indiretos, incidentais, especiais, consequentes ou punitivos, incluindo perda de lucros, dados ou boa-vontade."
+                "text": "Os pagamentos são processados com segurança através de fornecedores terceiros (ex., Stripe, PayPal)."
+            },
+            {
+                "type": "p",
+                "text": "Todas as taxas devem ser pagas antecipadamente."
+            },
+            {
+                "type": "p",
+                "text": "As subscrições renovam automaticamente mensalmente, a menos que canceladas."
+            },
+            {
+                "type": "p",
+                "text": "Reembolsos não são fornecidos para serviços concluídos. Para subscrições, reembolsos são tratados ao nosso critério, a menos que exigido por lei."
             },
             {
                 "type": "h4",
-                "text": "5. Contacta-nos"
+                "text": "6. Responsabilidades do Utilizador"
             },
             {
                 "type": "p",
-                "text": "Se tiveres questões sobre estes Termos, contacta-nos em terms@dagalow.com"
+                "text": "Ao usares os nossos Serviços, concordas em não:"
+            },
+            {
+                "type": "ul",
+                "items": [
+                    "Partilhar a tua conta com outros.",
+                    "Assediar, abusar ou prejudicar outros.",
+                    "Fazer uso indevido do nosso conteúdo (ex., redistribuir vídeos de coaching sem permissão).",
+                    "Tentar interromper ou hackear o nosso site ou Serviços."
+                ]
+            },
+            {
+                "type": "h4",
+                "text": "7. Propriedade Intelectual"
+            },
+            {
+                "type": "p",
+                "text": "Todos os materiais fornecidos através dos nossos Serviços (vídeos, gravações, documentos, conteúdo do site) são da nossa propriedade ou dos nossos licenciadores."
+            },
+            {
+                "type": "p",
+                "text": "É-te concedida uma licença pessoal, não transferível, não exclusiva para usar os materiais apenas para fins pessoais."
+            },
+            {
+                "type": "p",
+                "text": "Não podes copiar, distribuir, vender ou explorar o nosso conteúdo sem consentimento prévio por escrito."
+            },
+            {
+                "type": "h4",
+                "text": "8. Aviso Legal de Coaching e Consultas"
+            },
+            {
+                "type": "p",
+                "text": "O nosso coaching e consultas fornecem orientação e suporte, mas não são um substituto para aconselhamento médico, legal, financeiro ou psicológico profissional."
+            },
+            {
+                "type": "p",
+                "text": "Reconheces que os resultados dependem das tuas próprias ações e circunstâncias. Não garantimos resultados."
+            },
+            {
+                "type": "h4",
+                "text": "9. Rescisão"
+            },
+            {
+                "type": "p",
+                "text": "Podemos suspender ou encerrar a tua conta ou acesso aos Serviços se:"
+            },
+            {
+                "type": "ul",
+                "items": [
+                    "Não pagares as taxas.",
+                    "Violares estes Termos.",
+                    "Te envolveres em conduta abusiva ou prejudicial."
+                ]
+            },
+            {
+                "type": "p",
+                "text": "Podes cancelar a tua conta a qualquer momento contactando-nos."
+            },
+            {
+                "type": "h4",
+                "text": "10. Limitação de Responsabilidade"
+            },
+            {
+                "type": "p",
+                "text": "Na máxima extensão permitida por lei, não somos responsáveis por quaisquer danos indiretos, incidentais ou consequenciais, incluindo perda de lucros ou dados."
+            },
+            {
+                "type": "p",
+                "text": "A nossa responsabilidade total por qualquer reclamação não excederá o valor pago pelo Serviço relevante."
+            },
+            {
+                "type": "h4",
+                "text": "11. Lei Aplicável e Jurisdição"
+            },
+            {
+                "type": "p",
+                "text": "Estes Termos são regidos pelas leis de Portugal. Qualquer disputa será resolvida nos tribunais de España."
+            },
+            {
+                "type": "h4",
+                "text": "12. Alterações nos Termos"
+            },
+            {
+                "type": "p",
+                "text": "Podemos atualizar estes Termos de tempos em tempos. As atualizações serão publicadas no nosso site com a data de \"Última atualização\". O uso continuado dos nossos Serviços após as mudanças constitui aceitação dos novos Termos."
+            },
+            {
+                "type": "h4",
+                "text": "13. Contacta-nos"
+            },
+            {
+                "type": "p",
+                "text": "Se tiveres questões sobre estes Termos, contacta-nos em:"
+            },
+            {
+                "type": "p",
+                "text": "📧 Email: danielcluckins@gmail.com"
+            }
+        ]
+    },
+    "cookiePolicy": {
+        "title": "Política de Cookies",
+        "lead": "Última atualização: 29 de setembro de 2025",
+        "content": [
+            {
+                "type": "h4",
+                "text": "1. Sobre Cookies"
+            },
+            {
+                "type": "p",
+                "text": "Cookies são pequenos ficheiros armazenados no teu dispositivo ao visitar um site. São usados para fazer o site funcionar, manter contas seguras e (opcionalmente) rastrear análises ou anúncios."
+            },
+            {
+                "type": "h4",
+                "text": "2. Que Cookies Uso"
+            },
+            {
+                "type": "p",
+                "text": "Nesta etapa, o site usa apenas:"
+            },
+            {
+                "type": "p",
+                "text": "Cookies Estritamente Necessários: essenciais para segurança e pagamentos, incluindo cookies do Stripe (_stripe_mid, _stripe_sid) e cookies de sessão."
+            },
+            {
+                "type": "p",
+                "text": "Atualmente não uso cookies de análise ou marketing. Se eu adicionar, esta política será atualizada e um banner de cookies será exibido."
+            },
+            {
+                "type": "h4",
+                "text": "3. Gerir Cookies"
+            },
+            {
+                "type": "p",
+                "text": "Podes desabilitar cookies nas configurações do teu navegador, embora algumas funções (como pagamentos) possam não funcionar corretamente."
+            },
+            {
+                "type": "h4",
+                "text": "4. Cookies de Terceiros"
+            },
+            {
+                "type": "p",
+                "text": "O Stripe pode colocar cookies para prevenção de fraudes e processamento seguro de pagamentos. Consulta a Política de Privacidade do Stripe para detalhes."
+            },
+            {
+                "type": "h4",
+                "text": "5. Alterações"
+            },
+            {
+                "type": "p",
+                "text": "Posso atualizar esta Política de Cookies conforme os serviços mudam. As atualizações aparecerão aqui com uma nova data de \"Última atualização\"."
             }
         ]
     },

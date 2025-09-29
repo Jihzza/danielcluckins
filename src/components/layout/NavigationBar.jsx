@@ -86,7 +86,15 @@ export default function NavigationBar({ onNavigate, isChatbotOpen, onChatClick, 
 
 
   useEffect(() => {
-    const handler = (e) => setGlowChatIcon(!!e.detail);
+    const handler = (e) => {
+      const isVisible = !!e.detail;
+      // Debug log for production troubleshooting
+      if (process.env.NODE_ENV === 'production') {
+        console.log('NavigationBar received chatSectionVisible event:', isVisible);
+        console.log('Setting glowChatIcon to:', isVisible);
+      }
+      setGlowChatIcon(isVisible);
+    };
     window.addEventListener('chatSectionVisible', handler);
     return () => window.removeEventListener('chatSectionVisible', handler);
   }, []);
@@ -387,6 +395,12 @@ export default function NavigationBar({ onNavigate, isChatbotOpen, onChatClick, 
                   whileHover={{ scale: hoverScale }}
                   whileTap={{ scale: 0.95 }}
                   transition={{ duration: 0.12 }}
+                  ref={(el) => {
+                    if (item.isChat && el && process.env.NODE_ENV === 'production') {
+                      console.log('Chat icon element classes:', el.className);
+                      console.log('glowChatIcon state:', glowChatIcon);
+                    }
+                  }}
                 >
                   <motion.div animate={item.isChat ? chatPop : undefined} className="grid place-items-center">
                     <ImgIcon
