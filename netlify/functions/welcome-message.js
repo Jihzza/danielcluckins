@@ -11,6 +11,10 @@ const WELCOME_PROMPT = `Send a personal and with less than 50 characters welcome
 Access the user information, if needed, for more personalization.
 The only thing you can output is the user message and don't start and end the message in quotes.`;
 
+function stripQuotes(str) {
+  return str.replace(/^["']|["']$/g, '');
+}
+
 exports.handler = async (event) => {
   if (event.httpMethod !== 'POST') {
     return { statusCode: 405, body: 'Method Not Allowed' };
@@ -97,7 +101,7 @@ exports.handler = async (event) => {
 
     let welcomeMessage;
     try {
-      welcomeMessage = completion.choices[0].message.content.trim();
+      welcomeMessage = stripQuotes(completion.choices[0].message.content.trim());
     } catch {
       welcomeMessage = `Welcome! How can I assist you with Daniel's coaching today?`;
     }

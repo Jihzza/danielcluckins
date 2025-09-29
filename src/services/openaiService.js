@@ -9,7 +9,6 @@ class OpenAIService {
       const apiKey = import.meta.env.VITE_OPENAI_API_KEY;
       if (apiKey) {
         this.client = new OpenAI({ apiKey, dangerouslyAllowBrowser: true });
-        console.log('🤖 Development mode: Using OpenAI directly');
       } else {
         console.warn('🤖 Development mode: No VITE_OPENAI_API_KEY found, using mock responses');
         this.client = null;
@@ -132,7 +131,6 @@ SERVICE-SPECIFIC STARTERS:
     try {
       // In development, use OpenAI directly if available
       if (import.meta.env.DEV && this.client && this.client.chat) {
-        console.log('🤖 Development: Calling OpenAI directly');
 
         const sys = this.systemPrompt + this.buildProfileNote(userId, userProfile);
         const formatted = [
@@ -182,7 +180,6 @@ SERVICE-SPECIFIC STARTERS:
     } catch (error) {
       // Handle development mode gracefully
       if (import.meta.env.DEV && (!this.client || !this.client.chat)) {
-        console.log('🤖 Development mode: Using mock AI response (no API key)');
         const mockResponse = "Hello! I'm Daniel Cluckins' assistant. I'm currently in development mode without an API key configured. Please visit the live site at danielcluckins.com to experience the full AI-powered assistant.";
         return { success: true, content: mockResponse, usage: { prompt_tokens: 0, completion_tokens: 0, total_tokens: 0 } };
       }
@@ -199,13 +196,12 @@ SERVICE-SPECIFIC STARTERS:
     try {
       // In development, generate welcome message directly if OpenAI client available
       if (import.meta.env.DEV && this.client && this.client.chat) {
-        console.log('🤖 Development: Generating welcome message directly');
-
         const variations = ['Ready to level up?', 'How can I help you today?', 'Let\'s get started!', 'What\'s on your mind?'];
         const randomVariation = variations[Math.floor(Math.random() * variations.length)];
 
         let personalizedPrompt = `Send a personal and with less than 50 characters welcome message to the user to welcome him and know what they need.
-Access the user information, if needed, for more personalization.`;
+Access the user information, if needed, for more personalization.
+The only thing you can output is the user message and don't start and end the message in quotes.`;
         if (userProfile?.full_name) {
           personalizedPrompt = `Generate a brief, personalized welcome message for ${userProfile.full_name}. ${personalizedPrompt}`;
         }
@@ -222,12 +218,11 @@ Access the user information, if needed, for more personalization.`;
 
         let welcomeMessage;
         try {
-          welcomeMessage = completion.choices[0].message.content.trim();
+          welcomeMessage = this.stripQuotes(completion.choices[0].message.content.trim());
         } catch {
           welcomeMessage = `Welcome! How can I assist you with Daniel Cluckins services today?`;
         }
 
-        console.log('🤖 Development: Generated welcome:', welcomeMessage);
         return welcomeMessage;
       }
 
@@ -272,14 +267,11 @@ Access the user information, if needed, for more personalization.`;
               timezone: 'Europe/Madrid'
             };
 
-            console.log('🔍 OpenAI Service: Booking appointment with data:', bookingData);
-
             // Try payment booking first, fallback to direct booking
             let result;
             try {
               result = await consultationService.scheduleAppointmentWithPayment(bookingData);
             } catch (paymentError) {
-              console.log('Payment booking failed, trying direct booking:', paymentError.message);
               result = await consultationService.scheduleAppointment(bookingData);
             }
 
@@ -301,9 +293,7 @@ Access the user information, if needed, for more personalization.`;
 
       // Check for subscription booking
       if (response.includes('**BOOK_SUBSCRIPTION**')) {
-        console.log('🔍 OpenAI Service: Found BOOK_SUBSCRIPTION command');
         const subscriptionData = this.parseBookingData(response, 'BOOK_SUBSCRIPTION');
-        console.log('🔍 OpenAI Service: Parsed subscription data:', subscriptionData);
 
         if (subscriptionData && subscriptionData.Plan) {
 
@@ -316,14 +306,11 @@ Access the user information, if needed, for more personalization.`;
               phone: userProfile?.phone || (subscriptionData.Phone === 'not provided' ? null : subscriptionData.Phone)
             };
 
-            console.log('🔍 OpenAI Service: Booking subscription with data:', bookingData);
-
             // Try payment subscription first, fallback to direct subscription
             let result;
             try {
               result = await coachingService.subscribeToCoachingWithPayment(bookingData);
             } catch (paymentError) {
-              console.log('Payment subscription failed, trying direct subscription:', paymentError.message);
               result = await coachingService.subscribeToCoaching(bookingData);
             }
 
@@ -345,9 +332,7 @@ Access the user information, if needed, for more personalization.`;
 
       // Check for pitch deck request
       if (response.includes('**REQUEST_PITCH_DECK**')) {
-        console.log('🔍 OpenAI Service: Found REQUEST_PITCH_DECK command');
         const pitchData = this.parseBookingData(response, 'REQUEST_PITCH_DECK');
-        console.log('🔍 OpenAI Service: Parsed pitch deck data:', pitchData);
 
         if (pitchData && pitchData.Project) {
 
@@ -361,11 +346,7 @@ Access the user information, if needed, for more personalization.`;
               role: pitchData.Role || 'Not provided'
             };
 
-            console.log('🔍 OpenAI Service: Requesting pitch deck with data:', requestData);
-            console.log('🔍 OpenAI Service: User profile data used:', userProfile);
-
             const result = await pitchDeckService.requestPitchDeck(requestData);
-            console.log('🔍 OpenAI Service: Pitch deck request result:', result);
 
             if (!result.success) {
               return {
@@ -457,6 +438,13 @@ Access the user information, if needed, for more personalization.`;
   /**
    * Check if the service is properly configured
    */
+  /**
+   * Strip quotes from the beginning and end of a string
+   */
+  stripQuotes(str) {
+    return str.replace(/^["']|["']$/g, '');
+  }
+
   /**
    * Build profile note for system prompt (used in development mode)
    */
