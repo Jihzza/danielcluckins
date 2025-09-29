@@ -17,24 +17,24 @@ const ProfileDashboardBox = ({
 
   const content = (
     <div
-      className={`bg-black/10 backdrop-blur-md rounded-2xl p-4 shadow-sm hover:bg-white/15 hover:shadow-md transition-all duration-200 ${className}`}
+      className={`bg-black/10 backdrop-blur-md rounded-md p-2 md:p-3 shadow-sm hover:bg-white/15 hover:shadow-md transition-all duration-200 h-full flex flex-col ${className}`}
     >
-      <div className="flex items-center justify-between mb-3">
-        <h3 className="text-lg font-semibold text-white">{boxTitle}</h3>
+      <div className="flex items-center justify-between mb-1 md:mb-2">
+        <h3 className="text-xs md:text-lg font-semibold text-white">{boxTitle}</h3>
         {clickable && to && (
           <>
-            <ChevronRightIcon className="h-5 w-5 text-white/70" aria-hidden="true" />
+            <ChevronRightIcon className="h-3 w-3 md:h-6 md:w-6 text-white/70" aria-hidden="true" />
             <span className="sr-only">{t('common.viewDetails')}</span>
           </>
         )}
       </div>
-      <div className="text-white/90">{children}</div>
+      <div className="text-white/90 flex-1 flex flex-col">{children}</div>
     </div>
   );
 
   if (clickable && to) {
     return (
-      <Link to={to} className="block" aria-label={t('common.open')}>
+      <Link to={to} className="block h-full" aria-label={t('common.open')}>
         {content}
       </Link>
     );

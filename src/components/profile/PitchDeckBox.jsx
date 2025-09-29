@@ -3,11 +3,12 @@ import React from 'react';
 import { useTranslation } from 'react-i18next'; // if using next-i18next, import from 'next-i18next'
 import { DocumentTextIcon, ClockIcon } from '@heroicons/react/24/outline';
 import ProfileDashboardBox from './ProfileDashboardBox';
+import ProfileBoxItem from './ProfileBoxItem';
 
 const PitchDeckBox = ({ 
   requests = [], 
   to = '/profile/pitch-requests',
-  maxDisplay = 2 
+  maxDisplay = 3 
 }) => {
   const { t, i18n } = useTranslation();
 
@@ -50,44 +51,37 @@ const PitchDeckBox = ({
       to={to}
       className="bg-black/10"
     >
-      <div className="space-y-2 md:space-y-3 lg:space-y-4">
+      <div className="space-y-1">
         {displayedRequests.length > 0 ? (
           displayedRequests.map((request, index) => (
-            <div key={index} className="flex items-center justify-between p-3 md:p-4 lg:p-5 rounded-xl border border-white/20 shadow-sm">
-              <div className="flex items-center space-x-3 md:space-x-4 lg:space-x-5">
-                <DocumentTextIcon className="h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6 text-white/80" />
-                <div>
-                  <span className="text-sm md:text-base lg:text-lg font-medium text-white/90 block">
-                    {request.company || t('pitchDeck.box.untitled')}
-                  </span>
-                  <div className="flex items-center space-x-2 md:space-x-3 lg:space-x-4 mt-1">
-                    <ClockIcon className="h-3 w-3 md:h-4 md:w-4 lg:h-5 lg:w-5 text-white/60" />
-                    <span className="text-xs md:text-sm lg:text-base text-white/70">
-                      {formatDate(request.submittedAt || request.created_at)}
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              <span className={`text-xs md:text-sm lg:text-base font-medium ${getStatusColor(request.status)}`}>
-                {request?.status
-                  ? t(`pitchDeck.box.status.${request.status}`, { defaultValue: request.status })
-                  : t('pitchDeck.box.status.submitted')}
-              </span>
-            </div>
+            <ProfileBoxItem
+              key={index}
+              icon={DocumentTextIcon}
+              primaryText={request.company || t('pitchDeck.box.untitled')}
+              secondaryText={formatDate(request.submittedAt || request.created_at)}
+              rightContent={
+                <span className={`text-xs font-medium ${getStatusColor(request.status)}`}>
+                  {request?.status
+                    ? t(`pitchDeck.box.status.${request.status}`, { defaultValue: request.status })
+                    : t('pitchDeck.box.status.submitted')}
+                </span>
+              }
+            />
           ))
         ) : (
-          <div className="text-center py-4 md:py-6 lg:py-8">
-            <DocumentTextIcon className="h-8 w-8 md:h-10 md:w-10 lg:h-12 lg:w-12 text-white/40 mx-auto mb-2" />
-            <p className="text-sm md:text-base lg:text-lg text-white/70">
-              {t('pitchDeck.box.empty')}
-            </p>
+          <div className="flex items-center justify-center h-36 md:h-40 text-center">
+            <div>
+              <DocumentTextIcon className="h-8 w-8 md:h-10 md:w-10 text-white/40 mx-auto mb-2" />
+              <p className="text-xs md:text-sm text-white/70">
+                {t('pitchDeck.box.empty')}
+              </p>
+            </div>
           </div>
         )}
 
         {hasMore && (
-          <div className="text-center pt-2 md:pt-3 lg:pt-4">
-            <span className="text-xs md:text-sm lg:text-base text-white/60">
+          <div className="text-center pt-1">
+            <span className="text-xs text-white/60">
               {t('pitchDeck.box.more', { count: requests.length - maxDisplay })}
             </span>
           </div>
