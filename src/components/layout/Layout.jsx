@@ -8,6 +8,7 @@ import SidebarMenu from './SidebarMenu';
 import { useAuth } from '../../contexts/AuthContext';
 import { ScrollRootContext } from '../../contexts/ScrollRootContext';
 import { getOrCreateChatSession } from '../../services/chatService';
+import CookieConsent from '../common/CookieConsent';
 
 export default function Layout() {
   const headerRef = useRef(null);
@@ -132,6 +133,9 @@ export default function Layout() {
 
         {/* Bottom nav (sticky) */}
         <NavigationBar ref={navBarRef} navBarHeight={navBarHeight} />
+
+        {/* Cookie consent banner */}
+        <CookieConsent />
       </div>
     </ScrollRootContext.Provider>
   );
