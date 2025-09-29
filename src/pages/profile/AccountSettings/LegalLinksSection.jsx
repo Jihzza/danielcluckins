@@ -41,6 +41,12 @@ export default function LegalLinksSection() {
           label={t('accountSettings.legal.termsOfService')}
           icon={ScaleIcon}
         />
+        <hr className='text-white' />
+        <LegalLink
+          to="/cookie-policy"
+          label={t('accountSettings.legal.cookiePolicy')}
+          icon={ShieldCheckIcon}
+        />
     </section>
   );
 }
