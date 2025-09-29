@@ -88,7 +88,7 @@ exports.handler = async (event) => {
     const completion = await openai.chat.completions.create({
       model: 'gpt-4o-mini',
       messages: [
-        { role: 'system', content: 'You are a helpful assistant for Daniel DaGalow\'s coaching platform.' },
+        { role: 'system', content: 'You are a helpful assistant for Daniel Cluckins\' coaching platform.' },
         { role: 'user', content: personalizedPrompt }
       ],
       max_tokens: 50,
@@ -169,7 +169,7 @@ exports.handler = async (event) => {
     };
   } catch (error) {
     console.error('Overall error:', error, error.code, error.details);
-    const fallback = '👋 Welcome! I\'m here to help with Daniel\'s coaching services. What can I do for you?';
+    const fallback = '👋 Welcome! I\'m here to help with Daniel Cluckins\' coaching services. What can I do for you?';
     
     // Still try to insert fallback if no existing
     const { data: existingFallback } = await supabase

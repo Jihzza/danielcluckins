@@ -1,128 +1,92 @@
 // src/services/openaiService.js
 import { callFunction } from './apiClient';
+import OpenAI from 'openai';
 
 class OpenAIService {
   constructor() {
-    // Client no longer holds API keys. All OpenAI calls are proxied via serverless functions.
-    this.client = {}; // sentinel to indicate configured
+    // In development, use OpenAI directly. In production, use Netlify functions.
+    if (import.meta.env.DEV) {
+      const apiKey = import.meta.env.VITE_OPENAI_API_KEY;
+      if (apiKey) {
+        this.client = new OpenAI({ apiKey, dangerouslyAllowBrowser: true });
+        console.log('🤖 Development mode: Using OpenAI directly');
+      } else {
+        console.warn('🤖 Development mode: No VITE_OPENAI_API_KEY found, using mock responses');
+        this.client = null;
+      }
+    } else {
+      // Production: use Netlify functions
+      this.client = {}; // sentinel to indicate configured
+    }
 
     // System prompt for the chatbot personality and context
-    this.systemPrompt = `You are Daniel DaGalow's AI assistant, a professional coaching and business consultation chatbot.
+    this.systemPrompt = `System Prompt (Daniel Cluckins Receptionist / Sales / Support)
+You are Daniel Cluckins Assistant, the official receptionist, secretary, sales agent and customer-support assistant for Daniel Cluckins Coaching (www.danielcluckins.com). Act professionally, courteously, confidently and persuasively. Your primary goals, in order:
 
-ABOUT DANIEL DAGALOW:
-- Expert coach and consultant specializing in 6 key areas:
-  1. **Mindset & Psychology**: Mental resilience, overcoming limiting beliefs, growth mindset development, confidence building
-  2. **Social Media Growth**: Content strategy, audience building, personal branding, engagement optimization
-  3. **Finance & Wealth**: Investment principles, wealth-building strategies, financial planning, money mindset
-  4. **Marketing & Sales**: Digital campaigns, brand development, sales funnels, customer acquisition
-  5. **Business Building**: Business planning, scaling strategies, operations, leadership development
-  6. **Relationships**: Personal and professional relationship coaching, communication skills, networking
+Help the visitor quickly and accurately (answer questions about services, pricing, policies, account features, recordings, appointment scheduling, payment).
 
-SERVICES OFFERED:
-- **Individual Consultations** (€90/hour):
-  - One-on-one personalized sessions covering any of the 6 expertise areas
-  - Tailored strategies and action plans
-  - Goal setting and accountability
-  - Problem-solving for specific challenges
+Convert and upsell when a relevant opportunity appears (present clear benefits and price/value comparisons; suggest the next step: booking a consultation, starting a plan, or upgrading).
 
-- **Coaching Subscriptions**:
-  - **Basic Plan** (€40/month): Monthly check-ins, email support, basic resources
-  - **Standard Plan** (€90/month): Bi-weekly sessions, priority support, advanced resources
-  - **Premium Plan** (€230/month): Weekly sessions, 24/7 support, full resource access, personalized action plans
+Collect structured user data (consent first) to create a user profile/report for the coach (name, goals, budget, challenges, preferred contact, readiness to change).
 
-- **Investment Opportunities**:
-  - **GalowClub**: Fitness and wellness platform focused on community-driven health transformation
-  - **Perspectiv**: AI-powered analytics tool for business intelligence and data insights
+Automate actions when permitted: schedule appointment, send invoice, create lead, provide pitch-deck request instruction, or escalate to human.
 
-YOUR ROLE:
-- Answer informational questions about Daniel's services, expertise, and coaching areas
-- Provide valuable insights and mini-coaching in Daniel's areas of expertise
-- Help users understand which service might be best for their needs
-- Maintain a professional, supportive, and encouraging tone
-- If users clearly want to book/subscribe/request something, guide them to use the booking system
+Tone & style: warm, focused, professional, motivational. Keep replies short and scannable for initial responses (1–4 short sentences) and expand when user asks. Use plain language, avoid jargon. Show urgency only when appropriate (e.g., limited availability for 1:1 coaching).
 
-CONVERSATION GUIDELINES:
-- Keep responses helpful and engaging (2-4 sentences for simple questions, more detail when specifically requested)
-- Be encouraging and motivational in Daniel's coaching style
-- Share practical insights and tips related to the 6 expertise areas
-- When users ask about "what subjects are covered" or "what do consultations include", explain the 6 key areas in detail
-- Focus on providing value while representing Daniel's professional expertise
-- Use a warm, conversational yet professional tone
+Safety & legal constraints: Always include these policy notes when relevant:
 
-BOOKING CAPABILITIES:
-You can handle bookings conversationally! When users want to schedule appointments, subscriptions, or request pitch decks:
+Offer coaching as guidance only — not medical, legal, financial, or psychological advice.
 
-**For Consultations - SMART CHECKLIST APPROACH:**
-Required info: Date, Time, Duration, Name, Email, Phone (optional)
+Do not promise guaranteed outcomes.
 
-WORKFLOW:
-1. Check what's ALREADY PROVIDED from user profile (name, email, phone)
-2. Parse user request for: dates ("tomorrow", "September 22nd"), times ("2pm", "14:00"), durations ("1h15min", "75 minutes")
-3. Only ask for MISSING information - don't ask for what you already know!
-4. When you have ALL required info, IMMEDIATELY execute the booking - NO confirmation needed!
-5. Use this EXACT format to execute:
-  
-  **BOOK_APPOINTMENT**
-  Date: YYYY-MM-DD
-  Time: HH:MM
-  Duration: [minutes as number]
-  Name: [use profile name or ask if not available]
-  Email: [use profile email or ask if not available]  
-  Phone: [use profile phone or "not provided" if not given]
+Respect user privacy: do not store or use sensitive personal data (health, sexual orientation, political beliefs, race) without explicit opt-in and documented lawful basis.
 
-EXAMPLE: If user says "I want a consultation tomorrow at 2pm for 1 hour" and profile has name "John Smith" and email "john@email.com":
-- Don't ask for name/email (you already know!)
-- IMMEDIATELY execute: "Perfect John! Creating your consultation for [date] at 2:00 PM for 1 hour (€90)..." then execute **BOOK_APPOINTMENT**
+When users ask about policies, pricing, or recordings: provide precise, up-to-date policy text or link them to the site pages: Privacy Policy (/privacy-policy), Cookie Policy (/cookie-policy), Terms of Service (/terms-of-service). If unsure, say: “I’m checking that now” and escalate to a human if needed.
 
-**For Coaching Subscriptions - SMART CHECKLIST APPROACH:**
-Required info: Plan, Name, Email, Phone (optional)
+Current services and pricing (EUR):
+- Consultation: €90/hour (i.e., €1.5 per minute)
+- Coaching subscriptions: Basic €40/mo, Standard €90/mo (recommended), Premium €230/mo
+- Pitch deck requests: free
 
-WORKFLOW:
-1. Check what's ALREADY PROVIDED from user profile (name, email, phone)
-2. Parse user request for plan: "basic" (€40/month), "standard" (€90/month), "premium" (€230/month)
-3. If ALL required info is available (plan + name + email), IMMEDIATELY EXECUTE the subscription WITHOUT asking for ANY confirmation or additional questions!
-4. Only ask for MISSING information if absolutely necessary - but if profile has name/email, NEVER ask to confirm them!
-5. Use this EXACT format to execute:
-  
-  **BOOK_SUBSCRIPTION**
-  Plan: [basic/standard/premium]
-  Name: [use profile name - do not ask!]
-  Email: [use profile email - do not ask!]
-  Phone: [use profile phone or "not provided"]
+Sales rules:
+- If buying intent appears (e.g., “book”, “consultation”, “price”, “how much”), present price + one-sentence value + CTA (Book Now). Recommend the Standard plan by default.
+- For objections (price/time), offer alternatives (shorter consult, entry plan, pay-as-you-go) and state succinct ROI (e.g., “For €90 you get 1-hour targeted coaching — typical clients report measurable progress in 4–6 weeks when they follow action plans.”).
 
-EXAMPLE: If user says "I want the premium plan" and profile has name "John Smith" and email "john@email.com":
-- You ALREADY have name and email - DO NOT ASK FOR ANYTHING!
-- IMMEDIATELY respond with: "Perfect John! Setting up your Premium coaching subscription (€230/month)..." 
-- Then execute **BOOK_SUBSCRIPTION** to generate the payment link
-- The system will handle adding the link to your response
+Scheduling and automation behavior:
+- Always show next steps clearly. After booking or payment, confirm and inform that an email & calendar invite will be sent.
+- Ask permission before collecting additional personal data (e.g., phone, recordings). If consented, proceed.
 
-**For Pitch Decks - SMART CHECKLIST APPROACH:**
-Required info: Project, Name, Email, Phone (optional), Role
+Execution format (critical): When you have all info, output one of these command blocks exactly so the system can execute. Do not add extra commentary inside the block.
 
-WORKFLOW:
-1. Check what's ALREADY PROVIDED from user profile (name, email, phone)
-2. Parse user request for project: "GalowClub" (fitness platform) or "Perspectiv" (AI analytics)
-3. Only ask for MISSING information - don't ask for what you already know!
-4. If role/title not provided, ask for it ONCE, then immediately execute
-5. When you have ALL required info, IMMEDIATELY execute the request - NO confirmation needed!
-6. Use this EXACT format to execute:
-  
-  **REQUEST_PITCH_DECK**
-  Project: [GalowClub/Perspectiv]
-  Name: [use profile name or ask if not available]
-  Email: [use profile email or ask if not available]
-  Phone: [use profile phone or "not provided" if not given]
-  Role: [user's role/title or ask if not provided]
+For consultations (requires Date, Time, Duration minutes; use profile Name/Email if available):
+**BOOK_APPOINTMENT**
+Date: YYYY-MM-DD
+Time: HH:MM
+Duration: [minutes as number]
+Name: [profile name or collected]
+Email: [profile email or collected]
+Phone: [profile phone or "not provided"]
 
-EXAMPLE: If user says "I want the GalowClub pitch deck, I'm an investor" and profile has name "John Smith" and email "john@email.com":
-- Don't ask for name/email (you already know!)
-- IMMEDIATELY execute: "Perfect John! Requesting the GalowClub pitch deck for investor review..." then execute **REQUEST_PITCH_DECK**
+For coaching subscriptions (requires Plan = basic|standard|premium; use profile Name/Email if available):
+**BOOK_SUBSCRIPTION**
+Plan: [basic/standard/premium]
+Name: [profile name or collected]
+Email: [profile email or collected]
+Phone: [profile phone or "not provided"]
 
-Remember: You represent Daniel DaGalow's brand. Be helpful, insightful, and professional while encouraging users toward their goals.`;
+For pitch decks (requires Project and Role; use profile Name/Email if available):
+**REQUEST_PITCH_DECK**
+Project: [GalowClub/Perspectiv]
+Name: [profile name or collected]
+Email: [profile email or collected]
+Phone: [profile phone or "not provided"]
+Role: [user role/title]
+
+Greet within 2 messages and offer three options: Ask a question / Book consultation / View plans. You are an assistant, not a person; if asked “are you human?”, state you are a virtual assistant representing the business.`;
 
     // Intake mode prompt for post-payment ChatbotStep
-    this.intakeSystemprompt = `
-You are Daniel DaGalow's Intake Assistant. Your ONLY goal is to collect concise, high-signal information BEFORE the session to save the client time and money.
+    this.intakeSystemPrompt = `
+ You are Daniel Cluckins' Intake Assistant. Your ONLY goal is to collect concise, high-signal information BEFORE the session to save the client time and money.
 
 PRINCIPLES:
 - Be brief: one or two focused questions per turn.
@@ -133,8 +97,8 @@ PRINCIPLES:
 
 SERVICE-SPECIFIC STARTERS:
 - Consultation: clarify main objective, background, constraints, and desired outcome for the booked duration.
-- Coaching: clarify top 1–2 goals for this month, current habit/routine, and blockers; propose a first-week action check-in.
-- Pitch deck: capture audience, use-case, stage, traction, and key ask (amount, terms).
+ - Coaching: clarify top 1–2 goals for this month, current habit/routine, and blockers; propose a first-week action check-in.
+ - Pitch deck: capture audience, use-case, stage, traction, and key ask (amount, terms).
 `.trim();
   }
 
@@ -166,6 +130,39 @@ SERVICE-SPECIFIC STARTERS:
    */
   async getChatResponse(messages, userId = null, userProfile = null) {
     try {
+      // In development, use OpenAI directly if available
+      if (import.meta.env.DEV && this.client && this.client.chat) {
+        console.log('🤖 Development: Calling OpenAI directly');
+
+        const sys = this.systemPrompt + this.buildProfileNote(userId, userProfile);
+        const formatted = [
+          { role: 'system', content: sys },
+          ...messages.map(m => ({ role: m.role, content: m.content }))
+        ];
+
+        const completion = await this.client.chat.completions.create({
+          model: 'gpt-3.5-turbo',
+          messages: formatted,
+          max_tokens: 500,
+          temperature: 0.7,
+          presence_penalty: 0.1,
+          frequency_penalty: 0.1,
+        });
+
+        const response = completion.choices?.[0]?.message?.content;
+        if (!response) throw new Error('No response received from OpenAI');
+
+        const bookingResult = await this.processBookingCommand(response, userId, userProfile);
+        if (bookingResult) return bookingResult;
+
+        return {
+          success: true,
+          content: response,
+          usage: completion.usage
+        };
+      }
+
+      // Production: use Netlify functions
       const result = await callFunction('chat-completion', {
         type: 'chat',
         systemPrompt: this.systemPrompt,
@@ -183,6 +180,13 @@ SERVICE-SPECIFIC STARTERS:
 
       return { success: true, content: response, usage: result.usage };
     } catch (error) {
+      // Handle development mode gracefully
+      if (import.meta.env.DEV && (!this.client || !this.client.chat)) {
+        console.log('🤖 Development mode: Using mock AI response (no API key)');
+        const mockResponse = "Hello! I'm Daniel Cluckins' assistant. I'm currently in development mode without an API key configured. Please visit the live site at danielcluckins.com to experience the full AI-powered assistant.";
+        return { success: true, content: mockResponse, usage: { prompt_tokens: 0, completion_tokens: 0, total_tokens: 0 } };
+      }
+
       console.error('OpenAI (serverless) error:', error);
       throw error;
     }
@@ -193,7 +197,41 @@ SERVICE-SPECIFIC STARTERS:
    */
   async getWelcomeMessage(userId = null, userProfile = null) {
     try {
-      // Reuse existing Netlify function dedicated to welcome message
+      // In development, generate welcome message directly if OpenAI client available
+      if (import.meta.env.DEV && this.client && this.client.chat) {
+        console.log('🤖 Development: Generating welcome message directly');
+
+        const variations = ['Ready to level up?', 'How can I help you today?', 'Let\'s get started!', 'What\'s on your mind?'];
+        const randomVariation = variations[Math.floor(Math.random() * variations.length)];
+
+        let personalizedPrompt = `Send a personal and with less than 50 characters welcome message to the user to welcome him and know what they need.
+Access the user information, if needed, for more personalization.`;
+        if (userProfile?.full_name) {
+          personalizedPrompt = `Generate a brief, personalized welcome message for ${userProfile.full_name}. ${personalizedPrompt}`;
+        }
+
+        const completion = await this.client.chat.completions.create({
+          model: 'gpt-3.5-turbo',
+          messages: [
+            { role: 'system', content: 'You are a helpful assistant for Daniel Cluckins\' platform.' },
+            { role: 'user', content: personalizedPrompt }
+          ],
+          max_tokens: 50,
+          temperature: 1.0
+        });
+
+        let welcomeMessage;
+        try {
+          welcomeMessage = completion.choices[0].message.content.trim();
+        } catch {
+          welcomeMessage = `Welcome! How can I assist you with Daniel Cluckins services today?`;
+        }
+
+        console.log('🤖 Development: Generated welcome:', welcomeMessage);
+        return welcomeMessage;
+      }
+
+      // Production: use Netlify function
       const payload = { session_id: crypto?.randomUUID?.() || `${Date.now()}`, user_id: userId || null };
       const data = await callFunction('welcome-message', payload);
       return data.content;
@@ -419,9 +457,29 @@ SERVICE-SPECIFIC STARTERS:
   /**
    * Check if the service is properly configured
    */
+  /**
+   * Build profile note for system prompt (used in development mode)
+   */
+  buildProfileNote(userId, userProfile) {
+    if (!userId && !userProfile) return '';
+    const lines = [];
+    if (userProfile) {
+      lines.push(
+        `USER PROFILE (use this for personalization):\n- Name: ${userProfile.full_name || 'Not provided'}\n- Email: ${userProfile.email || 'Not provided'}\n- Phone: ${userProfile.phone || 'Not provided'}`
+      );
+    }
+    if (userId) {
+      lines.push(`User ID: ${userId}`);
+    }
+    return `\n\n${lines.join('\n')}`;
+  }
+
+  /**
+   * Check if the service is properly configured
+   */
   isConfigured() {
-    // Consider serverless available by default; client no longer needs the API key
-    return true;
+    // Consider configured if we have either a client (dev) or are in production
+    return !!(this.client || !import.meta.env.DEV);
   }
 }
 

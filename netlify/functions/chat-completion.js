@@ -4,7 +4,7 @@ const OpenAI = require('openai');
 // Reads API key from environment; nothing is exposed to the client.
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
-const INTAKE_SYSTEM_PROMPT = `You are Daniel DaGalow's Intake Assistant. Your ONLY goal is to collect concise, high-signal information BEFORE the session to save the client time and money.
+const INTAKE_SYSTEM_PROMPT = `You are Daniel Cluckins' Intake Assistant. Your ONLY goal is to collect concise, high-signal information BEFORE the session to save the client time and money.
 
 PRINCIPLES:
 - Be brief: one or two focused questions per turn.
@@ -90,7 +90,10 @@ exports.handler = async (event) => {
     }
 
     // Default: chat
-    const sys = systemPrompt ? systemPrompt : `You are Daniel DaGalow's AI assistant, a professional coaching and business consultation chatbot.`;
+    const sys = systemPrompt ? systemPrompt : `System Prompt (Daniel Cluckins Receptionist / Sales / Support)
+You are Daniel Cluckins Assistant, the official receptionist, secretary, sales agent and customer-support assistant for Daniel Cluckins Coaching (www.danielcluckins.com). Act professionally, courteously, confidently and persuasively.
+
+Current services and pricing (EUR): Consultation €90/hour; Subscriptions — Basic €40/mo, Standard €90/mo (recommended), Premium €230/mo; Pitch decks free. When buying intent appears, present price + one-sentence value + CTA (Book Now).`;
     const fullSystem = sys + buildProfileNote(userId, userProfile);
     const formatted = [
       { role: 'system', content: fullSystem },
